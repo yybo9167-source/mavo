@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>mavo admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1b1fb3;--deep:#10138a;--soft:#eceeff;--mid:#c9ceff;--ink:#0e1040;--muted:#5b5e8c;--line:#dfe2ff;--red:#c0262d;--amber:#b86e00;--green:#12805c;
+--d:'Quicksand','Trebuchet MS',sans-serif;--b:'Nunito','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--b);color:var(--ink);background:#f6f7ff;line-height:1.45}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--mid);outline-offset:2px}
+[hidden]{display:none!important}
+.muted{color:var(--muted)}.err{color:var(--red)}
+.top{position:sticky;top:0;z-index:5;background:#fff;border-bottom:2px solid var(--line);display:flex;align-items:center;gap:10px;padding:10px 20px;flex-wrap:wrap}
+.brand{font:700 24px var(--d);color:var(--blue);letter-spacing:-.03em}.brand i{font-style:normal;font-size:13px;background:var(--blue);color:#fff;border-radius:10px;padding:2px 9px;margin-left:6px;letter-spacing:0;vertical-align:middle}
+#tabs{display:flex;gap:4px;flex-wrap:wrap;margin-left:12px;flex:1}
+#tabs button{padding:8px 16px;border-radius:18px;font:700 15px var(--d);color:var(--ink)}
+#tabs button:hover{background:var(--soft)}#tabs button[aria-current="true"]{background:var(--blue);color:#fff}
+.top a{color:var(--blue);font:700 14px var(--d);text-decoration:none}
+#out{font:700 14px var(--d);color:var(--muted)}
+main{max-width:1050px;margin:0 auto;padding:24px 20px 80px}
+h1{font:700 28px var(--d);color:var(--blue);letter-spacing:-.02em;margin-bottom:16px}
+h2{font:700 20px var(--d);color:var(--blue);margin:26px 0 10px}
+.bar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.bar input{flex:1;min-width:180px;height:44px;border-radius:22px;border:2px solid var(--line);padding:0 18px;background:#fff;outline:0}
+.bar input:focus{border-color:var(--blue)}
+.btn{height:44px;padding:0 22px;border-radius:22px;background:var(--blue);color:#fff;font:700 15px var(--d)}.btn:hover{background:var(--deep)}.btn:disabled{opacity:.5}
+.ghost{height:36px;padding:0 14px;border-radius:18px;background:var(--soft);color:var(--blue);font:700 14px var(--d)}.ghost:hover{background:var(--mid)}
+.ghost.red{color:var(--red)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.stat{background:#fff;border-radius:22px;padding:20px;border:2px solid var(--line)}
+.stat b{display:block;font:700 30px var(--d);color:var(--blue)}.stat span{color:var(--muted);font-size:15px}
+.list{display:grid;gap:10px}
+.row{background:#fff;border:2px solid var(--line);border-radius:22px;padding:12px 16px;display:grid;grid-template-columns:56px 1fr auto auto auto auto;gap:14px;align-items:center}
+.row.off{opacity:.55}
+.th{width:56px;height:56px;border-radius:16px;background:var(--soft);display:grid;place-items:center;font-size:28px;overflow:hidden}.th img{width:100%;height:100%;object-fit:cover}
+.gr b{display:block;font:700 17px var(--d)}.gr small{color:var(--muted)}
+.pc{font:700 16px var(--d);color:var(--blue);text-align:right}.pc s{display:block;color:var(--muted);font:500 13px var(--b)}
+.stk{font-size:13px;color:var(--muted);display:grid;gap:2px}
+.stk input{width:80px;height:36px;border-radius:12px;border:2px solid var(--line);padding:0 10px;font:700 15px var(--d)}
+.stk.warn input{border-color:var(--amber);background:#fff6e6}.stk.bad input{border-color:var(--red);background:#ffecee}
+.sw{position:relative;width:46px;height:26px}.sw input{opacity:0;position:absolute;inset:0;width:100%;height:100%;cursor:pointer;z-index:1}
+.sw i{position:absolute;inset:0;border-radius:13px;background:var(--mid);transition:background .2s}
+.sw i::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .2s}
+.sw input:checked+i{background:var(--blue)}.sw input:checked+i::after{transform:translateX(20px)}
+.bt{display:flex;gap:6px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chips button{padding:7px 16px;border-radius:18px;background:#fff;border:2px solid var(--line);font:700 14px var(--d);color:var(--blue)}
+.chips button[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.order{background:#fff;border:2px solid var(--line);border-radius:22px;padding:16px 18px;display:grid;gap:8px}
+.order.new{border-color:var(--blue)}
+.oh{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.oh b{font:700 18px var(--d)}.order ul{list-style:none;padding:0;color:var(--muted)}
+.order a{color:var(--blue);font-weight:700;text-decoration:none}
+.tot{font:700 18px var(--d);color:var(--blue)}
+select{height:38px;border-radius:19px;border:2px solid var(--line);background:#fff;padding:0 12px;font-weight:700}
+.panel{background:#fff;border:2px solid var(--line);border-radius:26px;padding:24px;display:grid;gap:14px;max-width:640px}
+.fl{display:grid;gap:5px}.fl>span{font:700 14px var(--d);color:var(--muted)}
+.fl input:not([type=checkbox]):not([type=file]),.fl textarea,.fl select{width:100%;border-radius:16px;border:2px solid var(--line);padding:10px 14px;background:#fff;outline:0}
+.fl input:not([type=checkbox]):not([type=file]){height:44px}
+.fl input:focus,.fl textarea:focus,.fl select:focus{border-color:var(--blue)}
+.ck{display:flex;gap:10px;align-items:center;font-weight:700}.ck input{width:20px;height:20px;accent-color:var(--blue)}
+.imgf{display:flex;gap:14px;align-items:center}.prev{width:96px;height:96px;border-radius:20px;background:var(--soft);display:grid;place-items:center;color:var(--muted);font-size:13px;text-align:center;overflow:hidden;flex:none}.prev img{width:100%;height:100%;object-fit:cover}
+.imgf>div:last-child{display:grid;gap:8px;min-width:0}
+dialog{border:0;border-radius:28px;padding:0;width:min(560px,94vw);max-height:92vh}
+dialog::backdrop{background:rgba(14,16,64,.5)}
+#frm{display:grid;gap:14px;padding:26px;max-height:92vh;overflow:auto}
+#frm h2{margin:0}.acts{display:flex;gap:10px;justify-content:flex-end;position:sticky;bottom:-26px;background:#fff;padding:12px 0 0}
+.center{min-height:100vh;display:grid;place-items:center;padding:20px}
+.card{background:#fff;border:2px solid var(--line);border-radius:28px;padding:30px;width:min(420px,100%);display:grid;gap:14px}
+.card h1{margin:0}
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:24px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:50}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){
+ .row{grid-template-columns:56px 1fr;grid-template-areas:"t g" "p p" "s s" "w w" "b b"}
+ .row .th{grid-area:t}.row .gr{grid-area:g}.row .pc{grid-area:p;text-align:left}.row .stk{grid-area:s}.row .sw{grid-area:w}.row .bt{grid-area:b}
+ .top{padding:10px 14px}#tabs{margin-left:0;order:3;width:100%}main{padding:18px 14px 80px}
+}
+</style>
+</head>
+<body>
+<script>
+(function(){function show(m){var d=document.getElementById("dbg");if(!d){d=document.createElement("pre");d.id="dbg";d.style.cssText="position:fixed;left:8px;right:8px;bottom:8px;max-height:40vh;overflow:auto;background:#fff0f0;color:#900;padding:10px 14px;border:2px solid #c0262d;border-radius:12px;z-index:99;white-space:pre-wrap;font:13px/1.4 monospace";document.body.appendChild(d)}d.textContent+=m+"\n"}
+addEventListener("error",function(e){show("Xato: "+(e.message||e.error)+(e.lineno?" (qator "+e.lineno+")":""))});
+addEventListener("unhandledrejection",function(e){show("Xato: "+((e.reason&&e.reason.message)||e.reason))})})();
+</script>
+
+<div id="setup" class="center" hidden><div class="card"><h1>Ulanish kerak</h1>
+<p>Admin panel hali bazaga ulanmagan. <b>config.js</b> faylida <b>SUPABASE_URL</b> va <b>SUPABASE_KEY</b> ni to'ldiring.</p></div></div>
+
+<div id="login" class="center">
+  <form class="card" id="lf"><div class="brand">mavo <i>admin</i></div><h1>Kirish</h1>
+    <label class="fl"><span>Email</span><input id="em" type="email" autocomplete="username" required></label>
+    <label class="fl"><span>Parol</span><input id="pw" type="password" autocomplete="current-password" required></label>
+    <p class="err" id="lerr"></p><button class="btn">Kirish</button></form>
+</div>
+
+<div id="app" hidden>
+  <header class="top"><span class="brand">mavo <i>admin</i></span><nav id="tabs"></nav>
+    <a href="index.html" target="_blank">Saytni ko'rish ↗</a><button id="out">Chiqish</button></header>
+  <main id="view"></main>
+</div>
+
+<dialog id="dlg"><form id="frm"><h2 id="ft"></h2><div id="ff" style="display:grid;gap:14px"></div>
+  <div class="acts"><button type="button" class="ghost" id="cancel">Bekor qilish</button><button class="btn" id="save">Saqlash</button></div></form></dialog>
+<div id="toast" role="status"></div>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.min.js" defer></script>
+<script type="module">
+const C=window.MAVO||{},$=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=n=>(Number(n)||0).toLocaleString("ru-RU").replace(/\u00a0/g," ")+" so'm";
+const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("on"),2400)};
+if(!C.SUPABASE_URL||!C.SUPABASE_KEY||!window.supabase){$("#login").hidden=true;$("#setup").hidden=false;throw new Error("config.js to'ldirilmagan yoki Supabase kutubxonasi yuklanmadi")}
+const sb=supabase.createClient(C.SUPABASE_URL,C.SUPABASE_KEY);
+const q=async p=>{const {data,error}=await p;if(error)throw error;return data};
+const safe=f=>async(...a)=>{try{await f(...a)}catch(er){alert("Xatolik: "+(er.message||er))}};
+let cur="home",PR=[],BN=[],ps="",of="all";
+
+/* kirish */
+function show(a){$("#login").hidden=a;$("#app").hidden=!a;if(a)go(location.hash.slice(1)||"home")}
+$("#lf").onsubmit=async e=>{e.preventDefault();$("#lerr").textContent="";
+  const {error}=await sb.auth.signInWithPassword({email:$("#em").value.trim(),password:$("#pw").value});
+  if(error)$("#lerr").textContent=/invalid login/i.test(error.message)?"Email yoki parol noto'g'ri":"Xatolik: "+error.message;else show(true)};
+$("#out").onclick=async()=>{await sb.auth.signOut();show(false)};
+
+/* bo'limlar */
+const TABS={home:["Bosh sahifa",home],products:["Mahsulotlar",products],orders:["Buyurtmalar",orders],banners:["Banerlar",banners],settings:["Sozlamalar",settings]};
+$("#tabs").innerHTML=Object.entries(TABS).map(([k,[n]])=>`<button data-t="${k}">${n}</button>`).join("");
+function go(t){if(!TABS[t])t="home";cur=t;location.hash=t;
+  document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-current",b.dataset.t===t));
+  $("#view").innerHTML='<p class="muted">Yuklanmoqda…</p>';
+  TABS[t][1]().catch(e=>$("#view").innerHTML=`<p class="err">Xatolik: ${esc(e.message)}</p>`)}
+$("#tabs").onclick=e=>{const b=e.target.closest("button");if(b)go(b.dataset.t)};
+
+/* bosh sahifa */
+async function home(){
+  const [pr,od]=await Promise.all([q(sb.from("products").select("id,name,stock,active")),q(sb.from("orders").select("id,status,total,created_at"))]);
+  const ok=od.filter(o=>o.status!=="canceled"),day=new Date().toDateString();
+  const nw=od.filter(o=>o.status==="new").length,td=ok.filter(o=>new Date(o.created_at).toDateString()===day).length;
+  const out=pr.filter(p=>p.stock<=0),low=pr.filter(p=>p.stock>0&&p.stock<=5);
+  const li=a=>a.length?`<div class="list">${a.map(p=>`<div class="row" style="grid-template-columns:1fr auto"><b>${esc(p.name)}</b><span class="muted">${p.stock} dona</span></div>`).join("")}</div>`:`<p class="muted">Yo'q</p>`;
+  $("#view").innerHTML=`<h1>Bosh sahifa</h1><div class="stats">
+   <div class="stat"><b>${nw}</b><span>Yangi buyurtmalar</span></div><div class="stat"><b>${td}</b><span>Bugungi buyurtmalar</span></div>
+   <div class="stat"><b>${fmt(ok.reduce((s,o)=>s+Number(o.total),0))}</b><span>Jami savdo (bekor qilinmaganlar)</span></div>
+   <div class="stat"><b>${pr.length}</b><span>Mahsulotlar soni</span></div></div>
+   <h2>Omborda tugagan (${out.length})</h2>${li(out)}<h2>Kam qolgan, 5 donagacha (${low.length})</h2>${li(low)}
+   ${nw?`<p style="margin-top:22px"><button class="btn" data-act="goto" data-to="orders">Yangi buyurtmalarni ko'rish</button></p>`:""}`}
+
+/* mahsulotlar */
+async function products(){
+  PR=await q(sb.from("products").select("*").order("sort").order("id"));
+  $("#view").innerHTML=`<h1>Mahsulotlar</h1><div class="bar"><input id="ps" placeholder="Nomi yoki kategoriya bo'yicha qidirish" value="${esc(ps)}">
+   <button class="btn" data-act="new" data-t="products">+ Mahsulot qo'shish</button></div><div class="list" id="plist"></div>`;drawProducts()}
+function drawProducts(){
+  const t=ps.toLowerCase(),L=PR.filter(p=>(p.name+" "+(p.category||"")).toLowerCase().includes(t));
+  $("#plist").innerHTML=L.length?L.map(p=>`<div class="row ${p.active?"":"off"}">
+   <div class="th">${p.image_url?`<img src="${esc(p.image_url)}" alt="">`:esc(p.icon||"🛍️")}</div>
+   <div class="gr"><b>${esc(p.name)}</b><small>${esc(p.category||"Kategoriyasiz")}${p.tag?" · "+esc(p.tag):""}</small></div>
+   <div class="pc">${fmt(p.price)}${p.old_price?`<s>${fmt(p.old_price)}</s>`:""}</div>
+   <label class="stk ${p.stock<=0?"bad":p.stock<=5?"warn":""}">Omborda<input type="number" min="0" value="${p.stock}" data-act="stock" data-id="${p.id}"></label>
+   <label class="sw" title="Saytda ko'rsatish"><input type="checkbox" ${p.active?"checked":""} data-act="active" data-t="products" data-id="${p.id}"><i></i></label>
+   <div class="bt"><button class="ghost" data-act="edit" data-t="products" data-id="${p.id}">Tahrirlash</button><button class="ghost red" data-act="del" data-t="products" data-id="${p.id}">O'chirish</button></div></div>`).join(""):`<p class="muted">Mahsulot topilmadi.</p>`}
+
+/* banerlar */
+async function banners(){
+  BN=await q(sb.from("banners").select("*").order("sort").order("id"));
+  $("#view").innerHTML=`<h1>Reklama banerlari</h1><div class="bar"><button class="btn" data-act="new" data-t="banners">+ Baner qo'shish</button></div>
+  <div class="list">${BN.length?BN.map(b=>`<div class="row ${b.active?"":"off"}" style="grid-template-columns:56px 1fr auto auto">
+   <div class="th">${b.image_url?`<img src="${esc(b.image_url)}" alt="">`:esc(b.icon||"🛍️")}</div>
+   <div class="gr"><b>${esc(b.title)}</b><small>${esc(b.tag||"")}${b.price?" · "+fmt(b.price):""}</small></div>
+   <label class="sw"><input type="checkbox" ${b.active?"checked":""} data-act="active" data-t="banners" data-id="${b.id}"><i></i></label>
+   <div class="bt"><button class="ghost" data-act="edit" data-t="banners" data-id="${b.id}">Tahrirlash</button><button class="ghost red" data-act="del" data-t="banners" data-id="${b.id}">O'chirish</button></div></div>`).join(""):'<p class="muted">Baner yo\'q. Qo\'shsangiz, saytda karusel ko\'rinadi.</p>'}</div>`}
+
+/* buyurtmalar */
+const ST={new:"Yangi",confirmed:"Tasdiqlangan",delivered:"Yetkazilgan",canceled:"Bekor qilingan"};let OD=[];
+async function orders(){OD=await q(sb.from("orders").select("*").order("id",{ascending:false}).limit(300));drawOrders()}
+function drawOrders(){
+  const L=OD.filter(o=>of==="all"||o.status===of);
+  $("#view").innerHTML=`<h1>Buyurtmalar</h1><div class="chips">${[["all","Hammasi"],...Object.entries(ST)].map(([k,n])=>`<button data-act="flt" data-v="${k}" aria-pressed="${of===k}">${n}${k==="all"?"":" ("+OD.filter(o=>o.status===k).length+")"}</button>`).join("")}</div>
+  <div class="list">${L.length?L.map(o=>`<div class="order ${o.status}"><div class="oh"><b>№${o.id} · ${esc(o.name)}</b>
+   <select data-act="st" data-id="${o.id}" data-cur="${o.status}" ${o.status==="canceled"?"disabled":""}>${Object.entries(ST).map(([k,n])=>`<option value="${k}" ${k===o.status?"selected":""}>${n}</option>`).join("")}</select></div>
+   <div><a href="tel:${esc(o.phone.replace(/[^+\d]/g,""))}">${esc(o.phone)}</a> · <span class="muted">${new Date(o.created_at).toLocaleString("ru-RU")}</span></div>
+   <ul>${o.items.map(i=>`<li>• ${esc(i.name)} × ${i.qty} = ${fmt(i.price*i.qty)}</li>`).join("")}</ul><div class="tot">Jami: ${fmt(o.total)}</div></div>`).join(""):'<p class="muted">Buyurtma yo\'q.</p>'}</div>`}
+
+/* sozlamalar */
+const SF=[["phone","Telefon"],["telegram","Telegram username (@ belgisiz). Buyurtmalar shu yerga ham yuboriladi"],["instagram","Instagram username (@ belgisiz)"],["address","Manzil"],["hours","Ish vaqti"],["mapUrl","Xarita havolasi (Google/Yandex)"],["legalName","Kompaniya rasmiy nomi"],["inn","STIR"],["about","«Biz haqimizda» matni (bo'sh qolsa, standart matn chiqadi)","textarea"]];
+async function settings(){
+  const m=Object.fromEntries((await q(sb.from("settings").select("*"))).map(r=>[r.key,r.value]));
+  $("#view").innerHTML=`<h1>Sayt sozlamalari</h1><form class="panel" id="sf">${SF.map(([k,l,t])=>`<label class="fl"><span>${l}</span>${t?`<textarea name="${k}" rows="4">${esc(m[k]||"")}</textarea>`:`<input name="${k}" value="${esc(m[k]||"")}">`}</label>`).join("")}<button class="btn">Saqlash</button></form>`;
+  $("#sf").onsubmit=safe(async e=>{e.preventDefault();const f=new FormData(e.target);
+    await q(sb.from("settings").upsert(SF.map(([k])=>({key:k,value:String(f.get(k)||"").trim()}))));toast("Saqlandi")})}
+
+/* forma (mahsulot / baner) */
+const SCH={
+ products:{t:"mahsulot",d:{stock:0,active:true,icon:"🛍️",sort:0},f:[["name","Nomi","text",1],["category","Kategoriya (masalan: Kiyim)","text",0,"cats"],["price","Narxi (so'm)","number",1],["old_price","Eski narx (chegirma bo'lsa)","number"],["stock","Omborda (dona)","number",1],["tag","Belgi (Yangi, Chegirma...)","text"],["description","Tavsif","textarea"],["image_url","Rasm","image"],["icon","Emoji (rasm bo'lmasa ko'rinadi)","text"],["sort","Tartib raqami (kichigi birinchi)","number"],["active","Saytda ko'rsatilsin","check"]]},
+ banners:{t:"baner",d:{theme:"blue",active:true,icon:"🛍️",sort:0,link:"#shop"},f:[["title","Sarlavha","text",1],["text","Qisqa matn","textarea"],["tag","Belgi (Aksiya, Yangi...)","text"],["price","Narx (ixtiyoriy)","number"],["old_price","Eski narx (ixtiyoriy)","number"],["theme","Rang","select",0,[["blue","To'q ko'k"],["deep","Qoramtir ko'k"],["soft","Och ko'k"]]],["image_url","Rasm","image"],["icon","Emoji (rasm bo'lmasa)","text"],["link","Havola (masalan #shop)","text"],["sort","Tartib raqami","number"],["active","Saytda ko'rsatilsin","check"]]}};
+const fld=([k,l,t,req,opt],r)=>{const v=r[k]??"";
+  if(t==="check")return `<label class="ck"><input type="checkbox" name="${k}" ${v?"checked":""}> ${l}</label>`;
+  let c;
+  if(t==="textarea")c=`<textarea name="${k}" rows="3">${esc(v)}</textarea>`;
+  else if(t==="select")c=`<select name="${k}">${opt.map(([a,b])=>`<option value="${a}" ${a===v?"selected":""}>${b}</option>`).join("")}</select>`;
+  else if(t==="image")c=`<div class="imgf"><div class="prev">${v?`<img src="${esc(v)}" alt="">`:"Rasm yo'q"}</div><div><input type="file" accept="image/*" data-up="1"><input type="hidden" name="${k}" value="${esc(v)}"><button type="button" class="ghost" data-act="rmimg">Rasmni olib tashlash</button><small class="muted" data-st></small></div></div>`;
+  else c=`<input name="${k}" type="${t}" ${t==="number"?'step="any" min="0"':""} value="${esc(v)}" ${req?"required":""} ${opt==="cats"?'list="cats"':""}>`;
+  return `<div class="fl"><span>${l}${req?" *":""}</span>${c}</div>`};
+function openForm(table,row){
+  const S=SCH[table],r=row||{...S.d},dlg=$("#dlg");
+  $("#ft").textContent=(row?"Tahrirlash: ":"Yangi ")+S.t;
+  $("#ff").innerHTML=S.f.map(f=>fld(f,r)).join("")+`<datalist id="cats">${[...new Set(PR.map(p=>p.category).filter(Boolean))].map(c=>`<option value="${esc(c)}">`).join("")}</datalist>`;
+  dlg.dataset.table=table;dlg.dataset.id=row?row.id:"";dlg.showModal()}
+async function upImg(file,folder){
+  const bmp=await createImageBitmap(file),s=Math.min(1,1100/Math.max(bmp.width,bmp.height));
+  const c=document.createElement("canvas");c.width=Math.round(bmp.width*s);c.height=Math.round(bmp.height*s);
+  const x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);x.drawImage(bmp,0,0,c.width,c.height);
+  const blob=await new Promise(r=>c.toBlob(r,"image/jpeg",.85));
+  const path=`${folder}/${Date.now()}-${Math.random().toString(36).slice(2,7)}.jpg`;
+  const {error}=await sb.storage.from("images").upload(path,blob,{contentType:"image/jpeg",cacheControl:"31536000"});
+  if(error)throw error;return sb.storage.from("images").getPublicUrl(path).data.publicUrl}
+$("#cancel").onclick=()=>$("#dlg").close();
+$("#dlg").addEventListener("change",safe(async e=>{const t=e.target;if(!t.dataset.up||!t.files[0])return;
+  const w=t.closest(".imgf"),st=w.querySelector("[data-st]");st.textContent="Yuklanmoqda…";
+  try{const u=await upImg(t.files[0],$("#dlg").dataset.table);w.querySelector("input[type=hidden]").value=u;w.querySelector(".prev").innerHTML=`<img src="${esc(u)}" alt="">`;st.textContent="Yuklandi"}
+  catch(er){st.textContent="";throw er}}));
+$("#dlg").addEventListener("click",e=>{if(e.target.dataset.act==="rmimg"){const w=e.target.closest(".imgf");w.querySelector("input[type=hidden]").value="";w.querySelector(".prev").textContent="Rasm yo'q"}});
+$("#frm").onsubmit=safe(async e=>{e.preventDefault();
+  const d=$("#dlg"),table=d.dataset.table,id=d.dataset.id,frm=e.target,rec={};
+  SCH[table].f.forEach(([k,,t])=>{const el=frm.elements[k];
+    if(t==="check")rec[k]=el.checked;
+    else if(t==="number"){const v=el.value.trim();rec[k]=v===""?((k==="old_price"||(table==="banners"&&k==="price"))?null:0):Number(v)}
+    else rec[k]=el.value.trim()||null});
+  $("#save").disabled=true;
+  try{await q(id?sb.from(table).update(rec).eq("id",id):sb.from(table).insert(rec))}finally{$("#save").disabled=false}
+  d.close();toast("Saqlandi");go(cur)});
+
+/* umumiy tugmalar */
+$("#view").addEventListener("click",safe(async e=>{const b=e.target.closest("[data-act]");if(!b)return;const a=b.dataset.act,id=b.dataset.id;
+  if(a==="new")openForm(b.dataset.t);
+  else if(a==="edit")openForm(b.dataset.t,(b.dataset.t==="products"?PR:BN).find(x=>x.id==id));
+  else if(a==="del"){if(!confirm("Rostdan o'chirilsinmi?"))return;await q(sb.from(b.dataset.t).delete().eq("id",id));toast("O'chirildi");go(cur)}
+  else if(a==="goto")go(b.dataset.to);
+  else if(a==="flt"){of=b.dataset.v;drawOrders()}}));
+$("#view").addEventListener("input",e=>{if(e.target.id==="ps"){ps=e.target.value;drawProducts()}});
+$("#view").addEventListener("change",safe(async e=>{const t=e.target,a=t.dataset.act;
+  if(a==="stock"){const n=Math.max(0,Math.floor(+t.value||0));await q(sb.from("products").update({stock:n}).eq("id",t.dataset.id));
+    const p=PR.find(x=>x.id==t.dataset.id);if(p)p.stock=n;t.value=n;t.parentElement.className="stk "+(n<=0?"bad":n<=5?"warn":"");toast("Ombor yangilandi")}
+  else if(a==="active"){await q(sb.from(t.dataset.t).update({active:t.checked}).eq("id",t.dataset.id));t.closest(".row").classList.toggle("off",!t.checked);toast(t.checked?"Saytda ko'rinadi":"Saytdan yashirildi")}
+  else if(a==="st"){if(t.value==="canceled"&&!confirm("Bekor qilinsa, mahsulotlar omborga qaytariladi. Davom etilsinmi?")){t.value=t.dataset.cur;return}
+    try{await q(sb.rpc("set_order_status",{p_id:+t.dataset.id,p_status:t.value}));toast("Holat o'zgardi")}catch(er){alert(er.message)}go(cur)}}));
+
+/* ishga tushirish (hamma narsa e'lon qilingandan keyin) */
+(async()=>{let ok=false;
+  try{const r=await Promise.race([sb.auth.getSession(),new Promise((_,j)=>setTimeout(()=>j(new Error("sessiya tekshiruvi kutish vaqti tugadi")),5000))]);ok=!!r.data.session}
+  catch(e){console.error(e);$("#lerr").textContent="Sessiya tekshirilmadi: "+e.message+". Email va parolni qayta kiriting."}
+  show(ok)})();
+</script>
+</body>
+</html>
