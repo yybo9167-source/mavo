@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mavo — onlayn do'kon</title>
+<meta name="description" content="mavo — rasmiy onlayn do'kon. Kerakli narsalar bir joyda, tez yetkazib berish, qulay to'lov.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="mavo — rasmiy onlayn do'kon">
+<meta property="og:description" content="Tanlang, savatga soling, uyingizgacha olib boramiz.">
+<meta name="theme-color" content="#1b1fb3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1730 0 867 626'%3E%3Cpath fill='%231b1fb3' d='M2132.5 625.0C2131.4 624.5 2128.2 624.1 2125.3 624.1C2111.3 623.9 2092.4 606.9 2086.6 589.4C2084.3 582.4 2085.2 563.8 2088.1 559.8C2089.1 558.3 2090.0 556.7 2090.0 556.2C2090.0 555.7 2091.3 553.6 2093.0 551.5C2094.7 549.4 2096.0 547.2 2096.0 546.6C2096.0 544.3 2111.4 531.5 2112.9 532.5C2113.4 532.7 2116.4 532.0 2119.6 530.8C2132.3 526.1 2148.4 528.6 2158.3 536.7C2159.9 538.0 2161.6 539.0 2162.1 539.0C2165.2 539.0 2173.2 550.7 2177.2 560.8C2187.3 586.9 2169.1 620.2 2142.5 624.1C2139.8 624.5 2136.8 625.0 2136.0 625.3C2135.2 625.6 2133.6 625.5 2132.5 625.0ZM2341.5 624.4C2333.0 623.1 2328.9 621.8 2323.1 618.3C2315.7 613.9 2306.6 604.3 2304.9 599.1C2304.3 597.1 2303.4 595.0 2303.0 594.5C2301.7 592.9 2299.0 581.1 2299.0 577.5C2299.0 559.0 2310.6 540.8 2327.8 532.1C2346.9 522.5 2377.4 532.5 2386.8 551.4C2388.0 553.9 2390.0 558.0 2391.2 560.5C2394.6 567.3 2394.6 587.7 2391.2 593.3C2390.0 595.4 2389.0 597.7 2389.0 598.4C2389.0 603.0 2373.3 618.0 2364.2 622.0C2359.8 624.0 2347.4 625.3 2341.5 624.4ZM2205.0 511.1C2187.0 509.5 2142.4 497.9 2137.0 493.5C2136.2 492.8 2134.4 491.9 2133.0 491.5C2130.8 490.8 2114.2 483.2 2110.0 481.0C2102.8 477.1 2088.8 467.7 2085.1 464.3C2082.6 462.0 2078.6 458.8 2076.3 457.3C2071.0 453.7 2055.0 439.9 2055.0 438.8C2055.0 438.4 2053.8 436.7 2052.2 435.1C2050.7 433.5 2048.4 430.8 2047.0 429.0C2044.1 425.3 2037.3 417.3 2034.7 414.5C2032.6 412.3 2023.7 398.9 2020.4 393.2C2019.2 391.2 2017.4 387.9 2016.2 386.0C2014.5 383.1 2010.5 375.2 2003.4 360.7C2002.6 359.1 2002.0 357.3 2002.0 356.6C2002.0 356.0 2001.1 353.6 2000.0 351.5C1997.0 345.6 1989.3 322.6 1987.6 314.5C1986.8 310.6 1984.1 301.5 1981.6 294.1C1979.1 286.8 1977.0 279.5 1977.0 278.0C1977.0 276.4 1976.1 272.3 1975.0 268.8C1973.9 265.4 1973.0 261.4 1973.0 260.0C1973.0 258.6 1972.1 254.3 1971.1 250.5C1968.6 241.4 1966.2 230.5 1964.5 220.3C1963.7 215.7 1962.9 211.6 1962.5 211.1C1962.2 210.6 1961.3 205.5 1960.5 199.8C1959.7 194.1 1958.4 186.3 1957.5 182.5C1956.6 178.7 1955.5 172.2 1955.0 168.2C1954.5 164.3 1953.4 159.8 1952.6 158.2C1951.9 156.7 1950.0 149.2 1948.6 141.5C1944.3 119.0 1938.4 109.0 1925.6 102.6C1919.5 99.6 1919.5 99.6 1890.5 99.0C1860.8 98.4 1859.3 98.2 1854.6 94.1C1851.0 91.0 1850.7 87.9 1850.5 59.7C1850.3 29.1 1850.5 27.7 1857.0 24.2C1861.7 21.8 1925.5 23.2 1935.5 25.9C1945.0 28.6 1956.8 34.0 1962.6 38.4C1974.1 47.2 1988.0 65.5 1988.0 71.8C1988.0 72.8 1988.9 75.4 1990.1 77.5C1992.7 82.4 1994.7 97.6 1996.0 122.0C1996.5 131.6 1997.4 141.4 1998.1 143.7C1998.7 146.0 1998.9 148.3 1998.5 148.9C1997.5 150.6 1998.9 155.8 2000.6 156.4C2001.5 156.7 2002.9 156.6 2003.9 156.1C2005.7 155.1 2011.0 145.8 2011.0 143.5C2011.0 141.5 2019.3 125.8 2024.0 118.9C2025.4 116.9 2027.8 113.3 2029.5 110.9C2031.1 108.5 2034.3 104.2 2036.6 101.5C2038.9 98.8 2041.7 95.0 2042.8 93.2C2048.5 83.7 2084.2 51.3 2098.6 42.5C2113.1 33.7 2119.8 30.2 2127.0 27.5C2128.9 26.8 2133.9 24.6 2138.1 22.6C2142.3 20.6 2147.0 19.0 2148.4 19.0C2149.9 19.0 2152.8 18.1 2154.8 17.1C2159.3 14.7 2176.8 10.0 2181.2 10.0C2182.9 10.0 2187.6 9.1 2191.4 8.1C2201.2 5.4 2228.9 3.5 2244.2 4.4C2263.8 5.6 2265.1 5.7 2273.7 7.9C2278.2 9.1 2283.3 10.0 2285.0 10.0C2288.4 10.0 2302.0 13.8 2310.5 17.1C2313.3 18.1 2316.3 19.0 2317.3 19.0C2318.3 19.0 2322.9 20.8 2327.6 23.0C2332.3 25.2 2336.5 27.0 2337.0 27.0C2338.3 27.0 2359.0 38.3 2363.6 41.6C2381.2 54.1 2388.1 59.6 2400.4 71.0C2407.1 77.2 2408.2 78.3 2416.1 88.0C2419.9 92.7 2424.5 98.3 2426.3 100.5C2429.3 104.2 2441.0 123.1 2441.0 124.3C2441.0 124.6 2443.0 128.1 2445.5 132.1C2448.0 136.1 2450.0 139.8 2450.0 140.3C2450.0 141.3 2455.5 154.5 2457.1 157.4C2459.5 161.6 2464.9 178.1 2466.9 187.5C2468.1 193.0 2469.8 200.0 2470.7 203.0C2477.9 227.7 2478.4 291.5 2471.7 312.7C2470.8 315.3 2468.7 323.4 2466.9 330.5C2465.1 337.6 2462.2 346.9 2460.4 351.0C2458.6 355.1 2455.5 362.6 2453.5 367.5C2449.1 378.3 2448.5 379.6 2439.6 394.7C2431.3 408.9 2430.0 410.7 2419.0 423.5C2414.2 429.0 2409.9 434.2 2409.4 435.1C2408.2 437.2 2387.3 456.7 2383.4 459.4C2381.7 460.5 2376.9 464.0 2372.9 467.2C2364.7 473.4 2362.7 474.7 2349.5 481.7C2337.4 488.1 2324.0 494.3 2315.5 497.3C2311.7 498.7 2304.5 501.3 2299.7 503.0C2294.8 504.8 2287.9 506.6 2284.2 507.1C2280.5 507.6 2275.2 508.7 2272.5 509.6C2266.8 511.4 2220.2 512.4 2205.0 511.1ZM2274.5 402.0C2290.2 396.4 2307.7 387.3 2314.3 381.3C2315.5 380.2 2317.6 378.7 2318.9 378.0C2327.3 373.7 2346.2 349.9 2354.3 333.5C2362.0 318.0 2362.5 316.6 2367.9 295.5C2371.6 280.7 2373.6 248.3 2371.1 241.7C2370.6 240.3 2369.7 235.1 2369.1 230.2C2368.6 225.2 2367.6 220.1 2367.0 219.0C2366.4 217.8 2365.5 214.4 2365.0 211.3C2364.0 205.5 2362.6 201.5 2359.0 194.8C2357.9 192.8 2357.0 190.5 2357.0 189.8C2357.0 187.3 2350.6 175.4 2343.5 164.9C2338.6 157.6 2313.1 133.5 2307.6 131.0C2305.7 130.1 2303.6 128.9 2302.9 128.3C2302.1 127.7 2297.7 125.4 2293.0 123.1C2288.3 120.7 2283.6 118.4 2282.5 117.8C2281.4 117.2 2275.4 115.2 2269.0 113.3C2245.3 106.4 2203.3 108.2 2181.9 117.1C2174.0 120.4 2155.3 130.4 2153.0 132.4C2151.6 133.7 2149.2 135.6 2147.5 136.6C2141.7 140.1 2128.2 153.1 2122.5 160.5C2119.3 164.6 2116.4 168.0 2116.0 168.0C2114.9 168.0 2111.3 174.1 2107.5 182.0C2105.8 185.6 2102.8 191.9 2100.7 196.1C2098.7 200.3 2096.4 206.6 2095.6 210.1C2094.8 213.6 2093.6 218.8 2093.0 221.5C2092.4 224.2 2091.1 229.4 2090.2 233.0C2088.1 241.1 2088.0 271.8 2090.0 282.5C2094.5 306.6 2103.8 330.7 2115.1 347.6C2120.6 355.8 2140.2 376.0 2145.1 378.5C2147.0 379.5 2148.7 380.6 2149.0 381.0C2150.8 383.8 2166.1 392.6 2178.0 397.6C2198.8 406.4 2202.1 406.9 2237.0 406.6C2262.5 406.3 2262.5 406.3 2274.5 402.0Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1b1fb3; --blue-deep:#10138a; --blue-soft:#eceeff; --blue-mid:#c9ceff;
+  --ink:#0e1040; --muted:#5b5e8c; --white:#fff; --line:#dfe2ff;
+  --display:'Quicksand','Varela Round','Trebuchet MS',sans-serif;
+  --body:'Nunito','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--blue-mid);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* logo (haqiqiy logotip, vektor) */
+.logo{display:inline-block;color:var(--blue);line-height:0;text-decoration:none}
+.lg{display:block;height:100%;width:auto;fill:currentColor;overflow:visible}
+.lg .l{transform-box:fill-box;transform-origin:50% 100%}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;height:68px}
+.bar .logo{height:30px}
+.search{flex:1;max-width:460px;margin-left:auto}
+.search input{width:100%;height:42px;border-radius:21px;border:2px solid var(--line);background:var(--blue-soft);padding:0 18px;outline:0;transition:border-color .2s,background .2s}
+.search input:focus{border-color:var(--blue);background:#fff}
+.cartbtn{position:relative;width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;transition:transform .2s}
+.cartbtn:hover{transform:scale(1.06)}
+.cartbtn svg{width:22px;height:22px}
+.badge{position:absolute;top:-4px;right:-4px;min-width:21px;height:21px;border-radius:11px;background:#fff;color:var(--blue);border:2px solid var(--blue);font:700 12px/17px var(--display);text-align:center;padding:0 4px}
+.bump{animation:bump .45s}
+@keyframes bump{40%{transform:scale(1.25) rotate(-8deg)}}
+
+/* hero — the one bold moment */
+.hero{background:var(--blue);color:#fff;overflow:hidden;position:relative}
+.hero .wrap{padding-top:72px;padding-bottom:84px}
+.hero .logo{color:#fff;width:clamp(290px,64vw,780px)}
+.hero .lg{height:auto;width:100%}
+.hero .l{opacity:0;animation:pop .5s cubic-bezier(.3,1.5,.5,1) forwards}
+.hero .l0{animation-delay:.1s}.hero .l1{animation-delay:.25s}.hero .l2{animation-delay:.4s}
+.hero .l3{animation:drive 1.2s cubic-bezier(.2,.85,.25,1) .55s both}
+@keyframes pop{from{opacity:0;transform:translateY(60px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes drive{
+  0%{opacity:1;transform:translateX(2600px) rotate(-8deg)}
+  70%{opacity:1;transform:translateX(-30px) rotate(2deg)}
+  85%{opacity:1;transform:translateX(14px) rotate(-1deg)}
+  100%{opacity:1;transform:none}}
+.hero p{font-size:clamp(18px,2.4vw,24px);max-width:30ch;margin-top:28px;opacity:0;animation:fade .6s ease 1.5s forwards}
+@keyframes fade{to{opacity:1}}
+.cta{display:inline-block;margin-top:28px;background:#fff;color:var(--blue);font:700 17px var(--display);padding:14px 30px;border-radius:30px;text-decoration:none;opacity:0;animation:fade .6s ease 1.7s forwards;transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--blue-deep)}
+
+
+/* reklama baneri */
+.promo{padding-top:36px}
+.slider{position:relative;border-radius:34px;overflow:hidden;background:var(--blue-soft)}
+.track{display:flex;transition:transform .6s cubic-bezier(.5,0,.2,1)}
+.slide{flex:0 0 100%;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:12px;min-height:340px;padding:40px 56px;position:relative;overflow:hidden}
+.slide.t-blue{background:var(--blue);color:#fff}
+.slide.t-deep{background:var(--blue-deep);color:#fff}
+.slide.t-soft{background:var(--blue-soft);color:var(--ink)}
+.slide .k{display:inline-block;font:700 14px var(--display);padding:5px 14px;border-radius:16px;background:#fff;color:var(--blue)}
+.t-soft .k{background:var(--blue);color:#fff}
+.slide h3{font:700 clamp(28px,4.6vw,50px)/1.05 var(--display);letter-spacing:-.025em;margin:14px 0 10px;max-width:14ch}
+.slide p{font-size:18px;max-width:34ch;opacity:.92}
+.slide .pr{font:700 26px var(--display);margin:14px 0 20px}
+.slide .pr s{font:500 17px var(--body);opacity:.7;margin-left:8px}
+.slide .go{display:inline-block;background:#fff;color:var(--blue);font:700 16px var(--display);padding:12px 26px;border-radius:26px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.t-soft .go{background:var(--blue);color:#fff}
+.slide .go:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(14,16,64,.35)}
+.art{display:grid;place-items:center;position:relative;min-height:220px}
+.art::before{content:"";position:absolute;width:min(300px,80%);aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.14)}
+.t-soft .art::before{background:var(--blue-mid)}
+.art span{font-size:clamp(110px,16vw,190px);line-height:1;position:relative;filter:drop-shadow(0 14px 0 rgba(14,16,64,.12))}
+.art img{position:relative;max-width:100%;max-height:300px;object-fit:contain;border-radius:24px}
+.sd{position:absolute;left:56px;bottom:20px;display:flex;gap:8px}
+.sd button{width:10px;height:10px;border-radius:5px;background:rgba(255,255,255,.5);transition:width .3s,background .3s;padding:0}
+.sd button[aria-current="true"]{width:30px;background:#fff}
+.sn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:#fff;color:var(--blue);font:700 18px var(--display);box-shadow:0 3px 0 rgba(14,16,64,.25)}
+.sn.pv{left:12px}.sn.nx{right:12px}
+@media (max-width:700px){
+  .slide{grid-template-columns:1fr;padding:30px 24px 52px;min-height:0;text-align:left}
+  .art{min-height:150px;order:-1}.art span{font-size:96px}.art::before{width:150px}
+  .sd{left:24px}.sn{display:none}
+}
+
+/* sections */
+section{padding:56px 0 8px}
+h2{font:700 clamp(26px,4vw,36px)/1.15 var(--display);letter-spacing:-.02em;color:var(--blue)}
+.cats{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 28px}
+.chip{padding:9px 20px;border-radius:22px;background:var(--blue-soft);font:600 15px var(--display);color:var(--blue);transition:background .2s,color .2s}
+.chip:hover{background:var(--blue-mid)}
+.chip[aria-pressed="true"]{background:var(--blue);color:#fff}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{position:relative;display:flex;flex-direction:column}
+.pic{aspect-ratio:1;border-radius:28px;background:var(--blue-soft);display:grid;place-items:center;font-size:76px;position:relative;overflow:hidden;transition:background .25s}
+.card:hover .pic{background:var(--blue-mid)}
+.tag{position:absolute;top:12px;left:12px;background:var(--blue);color:#fff;font:700 13px var(--display);padding:3px 11px;border-radius:14px}
+.card h3{font:700 18px/1.25 var(--display);margin:12px 4px 2px}
+.card .meta{font-size:14px;color:var(--muted);margin:0 4px}
+.row{display:flex;align-items:center;justify-content:space-between;margin:8px 4px 0}
+.price{font:700 19px var(--display);color:var(--blue)}
+.price s{font:500 14px var(--body);color:var(--muted);margin-left:6px}
+.add{height:40px;padding:0 18px;border-radius:20px;background:var(--blue);color:#fff;font:700 15px var(--display);transition:transform .15s,background .2s}
+.add:hover{background:var(--blue-deep)}
+.add:active{transform:scale(.94)}
+.add.ok{background:#fff;color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue)}
+.empty{grid-column:1/-1;padding:40px;text-align:center;color:var(--muted)}
+
+/* info */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;margin-top:64px;padding:36px 0;border-top:2px solid var(--line)}
+.info h3{font:700 20px var(--display);color:var(--blue)}
+.info p{color:var(--muted);margin-top:4px}
+
+footer{margin-top:56px;background:var(--blue);color:#fff;padding:44px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end}
+footer .logo{height:46px;color:#fff}
+footer a{color:#fff}
+footer small{opacity:.8;display:block}
+
+/* drawer */
+.shade{position:fixed;inset:0;background:rgba(14,16,64,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:30}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:31;transform:translateX(102%);transition:transform .35s cubic-bezier(.3,.9,.3,1);display:flex;flex-direction:column;border-radius:28px 0 0 28px}
+body.open .shade{opacity:1;pointer-events:auto}
+body.open .drawer{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:22px 24px 12px}
+.dh h2{font-size:26px}
+.x{width:38px;height:38px;border-radius:50%;background:var(--blue-soft);color:var(--blue);font-size:20px}
+.items{flex:1;overflow:auto;padding:0 24px}
+.it{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.it .t{width:56px;height:56px;border-radius:16px;background:var(--blue-soft);display:grid;place-items:center;font-size:30px;flex:none}
+.it .n{flex:1;min-width:0}
+.it b{display:block;font:700 15px/1.2 var(--display)}
+.it span{font-size:14px;color:var(--blue);font-weight:700}
+.q{display:flex;align-items:center;gap:8px}
+.q button{width:28px;height:28px;border-radius:50%;background:var(--blue-soft);color:var(--blue);font-weight:700}
+.q em{font:700 15px var(--display);font-style:normal;min-width:16px;text-align:center}
+.foot{padding:18px 24px 24px;border-top:2px solid var(--line)}
+.tot{display:flex;justify-content:space-between;font:700 20px var(--display);margin-bottom:12px}
+.foot input{width:100%;height:44px;border-radius:22px;border:2px solid var(--line);padding:0 18px;margin-bottom:10px;outline:0}
+.foot input:focus{border-color:var(--blue)}
+.send{width:100%;height:50px;border-radius:25px;background:var(--blue);color:#fff;font:700 17px var(--display)}
+.send:disabled{opacity:.4;cursor:not-allowed}
+.hint{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+
+@media (max-width:560px){
+  .bar .logo{height:24px}.grid{gap:14px}.pic{font-size:58px;border-radius:22px}
+  .hero .wrap{padding-top:48px;padding-bottom:56px}
+}
+
+/* rasmiy sayt bo'limlari */
+.nav{display:flex;gap:4px;margin-left:12px}
+.nav a{padding:8px 13px;border-radius:18px;font:600 15px var(--display);color:var(--ink);text-decoration:none;transition:background .2s,color .2s}
+.nav a:hover{background:var(--blue-soft);color:var(--blue)}
+.burger{display:none;width:44px;height:44px;border-radius:50%;background:var(--blue-soft);position:relative}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:12px;width:20px;height:3px;border-radius:2px;background:var(--blue);content:"";transition:transform .25s,top .25s}
+.burger span{top:20px}.burger span::before{left:0;top:-6px}.burger span::after{left:0;top:6px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+.search{min-width:0}
+.pg{padding-top:72px;scroll-margin-top:60px}
+#shop{scroll-margin-top:60px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.narrow{max-width:760px}
+.lead{font-size:19px;color:var(--ink);margin-top:16px;max-width:46ch}
+.pledge{list-style:none;padding:32px;border-radius:30px;background:var(--blue);color:#fff;display:grid;gap:22px}
+.pledge li{font-size:16px;opacity:.95}
+.pledge b{display:block;font:700 21px var(--display);margin-bottom:2px}
+.terms{margin-top:22px;border-top:2px solid var(--line)}
+.terms div{display:grid;grid-template-columns:minmax(180px,.4fr) 1fr;gap:16px;padding:18px 0;border-bottom:2px solid var(--line)}
+.terms dt{font:700 18px var(--display);color:var(--blue)}
+.terms dd{margin:0}
+.faq{margin-top:22px}
+.faq details{border-bottom:2px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 44px 18px 0;font:700 18px var(--display);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;font-size:20px;transition:transform .25s,background .25s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);background:var(--blue);color:#fff}
+.faq p{padding:0 44px 18px 0;color:var(--muted)}
+.contacts{list-style:none;padding:0;margin-top:20px;display:grid;gap:14px}
+.contacts li{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:baseline}
+.contacts span{color:var(--muted);font-size:15px}
+.contacts a,.contacts b{font:700 18px var(--display);color:var(--blue);text-decoration:none}
+.contacts a:hover{text-decoration:underline}
+.map{display:inline-block;margin-top:22px;padding:11px 24px;border-radius:24px;background:var(--blue-soft);color:var(--blue);font:700 15px var(--display);text-decoration:none}
+.map:hover{background:var(--blue-mid)}
+.cform{background:var(--blue-soft);border-radius:30px;padding:30px;display:grid;gap:10px}
+.cform h3{font:700 22px var(--display);color:var(--blue);margin-bottom:4px}
+.cform input,.cform textarea{width:100%;border-radius:22px;border:2px solid var(--line);background:#fff;padding:12px 18px;outline:0;resize:vertical}
+.cform input{height:46px;padding:0 18px}
+.cform input:focus,.cform textarea:focus{border-color:var(--blue)}
+.cform .send{margin-top:4px}
+footer{padding:40px 0 22px}
+.fg{align-items:flex-start!important}
+footer .logo{height:42px}
+footer nav,.fc{display:grid;gap:8px}
+footer nav a,.fc a{text-decoration:none;opacity:.92}
+footer nav a:hover,.fc a:hover{text-decoration:underline}
+.legal{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.3);font-size:14px;opacity:.9;justify-content:space-between;gap:12px}
+.legal button{color:#fff;text-decoration:underline;margin-right:16px;font-size:14px}
+dialog{border:0;border-radius:28px;padding:28px;max-width:min(520px,92vw);color:var(--ink)}
+dialog::backdrop{background:rgba(14,16,64,.5)}
+dialog h2{font-size:26px;margin-bottom:10px}
+dialog p{margin-bottom:10px;color:var(--muted)}
+dialog .send{margin-top:8px}
+@media (max-width:900px){
+  .burger{display:block}
+  .nav{position:absolute;left:0;right:0;top:68px;background:#fff;border-bottom:2px solid var(--line);margin:0;padding:8px 20px 16px;flex-direction:column;display:none}
+  .nav.on{display:flex}
+  .nav a{padding:12px 6px;font-size:18px}
+  .two{grid-template-columns:1fr;gap:28px}
+  .search{margin-left:auto}
+}
+@media (max-width:560px){
+  .terms div{grid-template-columns:1fr;gap:4px}
+  .contacts li{grid-template-columns:84px 1fr}
+  .search input{padding:0 14px}
+  .bar{gap:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .hero .l,.hero p,.cta{opacity:1!important}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"mavo","description":"Onlayn do'kon"}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><path id="p0" d="M325.0 504.6C313.3 500.3 308.4 497.2 302.3 489.9C292.9 478.7 292.0 477.4 290.9 471.8C290.3 468.9 289.4 464.7 288.9 462.5C288.5 460.3 288.1 403.2 288.0 335.5C288.0 230.3 287.8 211.4 286.5 204.5C285.7 200.1 284.3 192.7 283.5 188.0C280.7 171.7 275.7 158.6 269.0 150.0C267.5 148.1 266.0 145.5 265.6 144.3C264.1 139.6 238.0 116.0 234.2 116.0C233.8 116.0 232.2 115.3 230.5 114.4C223.8 110.8 202.4 106.6 195.6 107.4C173.8 110.1 158.9 115.4 150.0 123.5C148.1 125.3 145.7 127.0 144.8 127.3C143.9 127.6 142.3 129.1 141.3 130.7C140.3 132.2 137.3 135.7 134.7 138.5C132.1 141.2 128.5 146.2 126.8 149.5C125.1 152.8 122.9 156.7 121.9 158.2C120.8 159.6 120.0 161.7 120.0 162.8C120.0 163.8 119.2 165.8 118.1 167.1C116.5 169.2 113.9 176.8 111.0 188.0C110.5 189.9 109.8 194.7 109.5 198.5C109.1 202.3 108.4 208.7 107.8 212.5C107.2 216.8 106.5 267.3 106.1 343.5L105.5 467.5L101.5 476.5C98.6 482.8 96.1 486.7 93.1 489.5C90.8 491.7 87.6 494.7 86.2 496.1C79.5 502.5 67.5 506.0 51.9 506.0C40.2 506.0 39.9 505.9 31.8 502.1C16.7 495.1 5.5 480.8 1.5 463.6C0.0 457.4 -0.1 443.8 0.3 334.1C0.7 208.4 0.7 207.3 4.7 186.5C5.6 182.1 6.6 176.2 7.0 173.5C7.5 170.8 8.3 167.2 8.9 165.7C9.5 164.1 10.0 161.6 10.0 160.1C10.0 157.3 11.4 152.8 16.5 139.5C18.0 135.7 19.8 130.1 20.5 127.2C21.7 122.3 22.7 120.0 27.2 111.5C28.1 109.8 29.3 107.4 29.9 106.0C31.1 103.2 31.8 102.1 38.0 92.6C40.5 88.9 43.4 84.3 44.5 82.5C45.6 80.7 49.0 76.4 52.1 72.9C55.1 69.4 58.3 65.5 59.1 64.3C62.2 59.7 77.7 44.4 82.0 41.6C84.5 40.0 87.6 37.9 89.0 36.8C94.0 33.2 99.6 29.6 104.0 27.3C106.5 26.0 110.5 23.6 113.0 22.1C115.5 20.5 118.6 19.1 120.0 19.1C121.4 19.0 123.6 18.3 124.8 17.4C127.8 15.3 143.2 10.4 149.5 9.5C152.2 9.1 157.2 8.1 160.5 7.3C170.5 4.7 202.5 4.0 215.5 5.9C227.0 7.7 247.2 13.5 253.5 16.9C255.7 18.1 258.2 19.0 259.0 19.0C259.8 19.0 261.6 19.9 263.0 21.0C264.4 22.1 265.9 23.0 266.3 23.0C266.7 23.0 268.3 23.8 269.7 24.7C271.2 25.7 273.8 27.0 275.5 27.6C284.6 30.8 312.7 56.0 322.5 69.9C324.1 72.2 326.6 75.6 328.0 77.5C329.4 79.3 332.3 83.9 334.5 87.6C342.4 101.0 345.1 102.1 349.7 94.3C353.5 87.8 362.7 73.9 365.1 71.0C366.3 69.6 369.1 66.0 371.4 62.9C373.6 59.8 378.6 54.6 382.5 51.3C386.4 48.0 390.2 44.5 391.0 43.5C397.1 36.1 434.3 14.0 440.6 14.0C441.9 14.0 444.4 13.1 446.2 12.0C448.0 10.9 450.8 10.0 452.3 10.0C453.9 10.0 459.2 8.8 464.2 7.4C472.4 5.0 474.9 4.8 491.8 4.7C517.2 4.5 520.0 4.7 529.9 7.1C534.6 8.2 539.6 9.3 541.0 9.6C544.7 10.4 561.1 16.8 570.6 21.1C572.9 22.2 575.0 23.0 575.4 23.0C575.8 23.0 577.3 23.8 578.8 24.9C580.3 25.9 586.0 29.7 591.5 33.4C605.7 42.7 628.3 65.0 635.2 76.6C636.2 78.2 638.3 81.3 639.9 83.5C641.5 85.7 644.6 90.9 646.7 95.0C648.8 99.1 651.0 102.9 651.7 103.3C652.4 103.7 653.0 104.7 653.0 105.4C653.0 106.1 653.9 107.8 654.9 109.2C656.0 110.5 658.3 115.8 660.0 121.0C661.7 126.2 664.5 133.0 666.1 136.2C667.7 139.3 669.0 142.8 669.0 143.8C669.0 144.8 669.9 148.3 671.0 151.6C672.2 154.8 673.5 160.0 674.0 163.0C674.4 166.0 675.3 170.4 675.9 172.8C677.0 177.1 677.6 180.8 680.4 205.0C681.8 216.9 682.0 233.6 681.8 342.0C681.5 465.5 681.5 465.5 679.2 469.7C678.0 472.0 677.0 474.6 677.0 475.4C677.0 476.2 676.4 477.5 675.6 478.2C674.9 479.0 673.6 481.0 672.7 482.6C670.4 487.1 654.9 502.0 652.5 502.0C651.4 502.0 648.0 503.0 645.0 504.2C635.9 507.8 613.6 506.6 607.0 502.1C605.6 501.1 602.9 499.7 601.0 499.0C596.8 497.3 584.0 486.4 584.0 484.6C584.0 483.9 583.0 482.1 581.9 480.6C580.7 479.1 578.6 474.4 577.1 470.2C574.5 462.5 574.5 462.5 573.9 334.5C573.4 206.5 573.4 206.5 570.1 193.0C568.3 185.6 566.3 177.0 565.6 174.0C562.9 162.9 550.2 139.7 543.8 134.2C542.2 132.9 541.0 131.2 541.0 130.4C541.0 129.7 539.8 128.3 538.2 127.3C536.7 126.4 533.9 124.2 532.0 122.5C527.2 118.3 514.7 112.4 507.5 111.0C504.2 110.3 500.0 109.3 498.1 108.7C483.5 104.4 450.7 112.8 438.3 124.2C435.9 126.3 433.4 128.0 432.5 128.0C431.7 128.0 431.0 128.3 431.0 128.8C431.0 129.2 429.1 131.5 426.8 134.0C415.1 146.7 403.0 171.7 399.6 190.0C394.8 216.3 394.8 216.9 395.2 344.5L395.5 464.5L392.3 471.5C384.2 489.6 377.9 496.6 364.1 503.1C354.8 507.5 335.0 508.3 325.0 504.6Z"/><path id="p1" d="M973.9 517.1C972.4 516.6 966.6 515.9 960.9 515.5C955.2 515.1 949.0 514.2 947.1 513.4C945.3 512.6 942.6 512.0 941.1 512.0C938.4 512.0 918.6 505.9 915.4 504.1C914.3 503.5 910.1 501.8 906.0 500.1C895.7 496.1 885.6 491.3 881.4 488.5C879.5 487.2 875.8 485.1 873.2 483.9C870.6 482.6 866.7 480.3 864.5 478.8C862.3 477.2 856.5 473.2 851.5 469.8C842.1 463.4 817.4 439.4 809.1 428.7C806.7 425.6 804.4 423.0 803.9 423.0C803.4 423.0 802.3 421.5 801.4 419.8C800.5 418.0 797.2 413.4 794.2 409.5C791.1 405.7 786.6 398.7 784.2 394.0C781.8 389.3 779.2 384.8 778.4 383.9C777.6 383.1 777.0 381.9 777.0 381.3C777.0 380.7 776.1 379.1 774.9 377.6C773.8 376.1 771.5 371.5 770.0 367.2C768.5 363.0 765.6 355.8 763.7 351.4C761.7 346.9 759.4 339.3 758.5 334.4C757.6 329.6 756.3 324.5 755.6 323.1C754.8 321.7 753.9 318.0 753.5 315.0C753.2 312.0 752.4 308.1 751.9 306.5C746.2 287.6 748.5 225.9 756.0 198.0C756.9 194.4 758.5 188.3 759.5 184.5C763.0 170.8 763.6 169.1 765.2 167.3C766.2 166.3 767.5 163.0 768.1 160.0C769.2 155.0 771.4 149.9 775.2 144.0C776.1 142.6 777.1 140.4 777.5 139.1C778.7 135.2 789.0 116.9 792.7 112.3C794.5 110.1 796.4 107.1 797.0 105.8C799.6 99.9 812.5 84.4 823.4 74.0C847.5 51.0 855.3 44.6 868.3 36.9C871.5 35.0 876.2 32.3 878.8 30.7C883.9 27.8 884.2 27.6 888.0 26.0C889.4 25.5 892.8 23.7 895.5 22.1C898.2 20.4 901.4 19.1 902.5 19.1C903.6 19.0 906.2 18.1 908.3 17.0C910.3 15.9 912.5 15.0 913.1 15.0C913.7 15.0 915.6 14.4 917.3 13.6C919.1 12.8 923.2 11.4 926.5 10.5C929.8 9.6 934.1 8.3 936.0 7.5C939.3 6.3 945.7 4.9 963.6 1.5C976.7 -0.9 1021.9 -0.6 1036.9 2.1C1048.5 4.1 1056.8 6.1 1062.5 8.1C1064.2 8.7 1067.3 9.5 1069.5 10.0C1071.7 10.4 1075.1 11.4 1077.0 12.2C1078.9 13.1 1082.5 14.4 1085.0 15.1C1090.6 16.7 1122.3 32.1 1127.0 35.5C1128.8 36.9 1130.9 38.0 1131.4 38.0C1137.3 38.1 1182.0 79.7 1191.4 94.0C1194.2 98.0 1197.1 102.1 1197.9 103.0C1200.8 105.9 1213.0 126.0 1213.0 127.8C1213.0 128.2 1214.8 131.2 1217.0 134.5C1219.2 137.8 1221.0 141.5 1221.0 142.6C1221.0 143.8 1222.7 148.3 1224.8 152.6C1229.5 162.4 1232.5 171.5 1234.0 180.4C1234.6 184.2 1235.6 188.2 1236.1 189.2C1239.5 195.5 1244.7 237.4 1245.6 265.5C1246.0 276.5 1246.4 288.0 1246.5 291.0C1246.6 294.0 1247.2 301.4 1247.8 307.5C1248.4 313.6 1249.2 329.3 1249.5 342.5C1250.0 359.1 1250.7 370.0 1252.1 377.8C1253.4 385.9 1254.0 394.1 1254.0 405.8C1254.0 415.0 1254.7 428.6 1255.5 436.0C1257.6 455.1 1257.5 472.9 1255.2 479.7C1252.8 487.2 1243.2 497.4 1237.1 499.0C1231.7 500.4 1191.6 500.4 1189.0 499.0C1188.0 498.4 1186.1 498.0 1184.8 498.0C1181.9 498.0 1170.5 487.4 1168.9 483.3C1168.3 481.8 1167.7 476.1 1167.6 470.8C1167.3 455.1 1163.0 452.8 1153.3 463.1C1148.1 468.5 1141.5 473.4 1126.4 482.8C1123.6 484.6 1121.0 486.0 1120.6 486.0C1120.1 486.0 1114.6 489.0 1108.2 492.6C1096.6 499.1 1091.2 501.5 1079.0 505.1C1075.4 506.2 1069.8 507.9 1066.5 509.0C1049.5 514.4 1028.1 517.1 999.0 517.6C986.6 517.8 975.3 517.5 973.9 517.1ZM1011.0 412.9C1015.1 412.3 1020.1 411.7 1022.0 411.5C1023.9 411.3 1029.5 410.0 1034.4 408.6C1039.2 407.2 1044.2 406.0 1045.3 406.0C1046.5 406.0 1051.4 403.8 1056.2 401.0C1061.0 398.2 1065.3 396.0 1065.6 396.0C1066.7 396.0 1086.0 382.9 1086.8 381.6C1087.2 380.9 1088.3 379.9 1089.2 379.4C1091.2 378.3 1100.8 369.0 1103.3 365.8C1104.2 364.5 1106.7 361.5 1108.7 359.0C1112.0 354.9 1118.7 345.3 1120.1 342.6C1120.4 342.0 1121.5 339.9 1122.5 338.0C1127.7 328.2 1131.0 320.7 1131.0 318.7C1131.0 317.5 1131.7 315.6 1132.5 314.6C1133.9 312.8 1136.2 305.7 1139.1 294.5C1139.9 291.3 1140.5 280.2 1140.8 264.0C1141.2 233.4 1140.6 229.7 1131.0 202.5C1118.0 165.9 1092.0 136.1 1057.5 118.2C1033.9 106.0 1006.9 101.7 979.5 105.6C968.6 107.1 948.2 113.3 941.1 117.1C939.1 118.1 937.1 119.0 936.7 119.0C936.2 119.0 934.5 120.1 932.8 121.5C931.2 122.9 929.3 124.0 928.6 124.0C927.9 124.0 926.3 125.1 925.0 126.5C923.7 127.9 922.0 129.0 921.3 129.0C919.1 129.0 898.8 147.0 891.8 155.1C883.8 164.5 878.1 173.1 869.3 189.1C865.5 195.8 857.9 218.8 855.4 231.0C850.7 253.8 852.6 289.6 859.4 306.0C860.2 307.9 862.2 314.1 864.0 319.7C865.7 325.3 868.2 331.4 869.4 333.3C870.7 335.2 872.1 337.9 872.5 339.1C872.9 340.4 873.9 342.2 874.7 343.0C875.4 343.8 877.1 346.1 878.5 348.0C879.8 349.9 883.0 354.5 885.5 358.3C890.7 365.8 906.5 381.0 914.9 386.5C917.9 388.5 921.7 391.2 923.2 392.6C924.8 393.9 926.6 395.0 927.0 395.0C927.5 395.0 930.0 396.3 932.5 397.9C941.3 403.5 958.4 409.1 976.5 412.4C986.0 414.1 1000.6 414.3 1011.0 412.9Z"/><path id="p2" d="M1546.5 511.1C1521.4 507.6 1503.1 489.1 1491.5 455.5C1490.0 451.1 1487.9 446.5 1486.9 445.1C1485.9 443.8 1485.0 442.1 1485.0 441.4C1485.0 440.7 1484.4 438.6 1483.6 436.8C1482.8 435.0 1480.7 429.7 1479.0 425.0C1477.2 420.3 1475.2 415.4 1474.4 414.0C1473.0 411.4 1471.2 406.7 1467.9 396.5C1466.8 393.2 1464.3 387.4 1462.4 383.5C1460.4 379.6 1458.2 374.7 1457.5 372.5C1456.8 370.3 1454.8 364.7 1453.1 360.0C1451.3 355.3 1449.3 349.6 1448.5 347.2C1447.8 344.8 1446.7 342.4 1446.2 341.7C1445.6 341.0 1443.7 336.2 1442.0 331.0C1440.3 325.8 1438.2 320.8 1437.4 319.9C1436.6 319.1 1436.0 317.7 1436.0 316.9C1436.0 316.1 1434.7 313.0 1433.1 310.0C1431.5 307.0 1428.6 299.7 1426.7 293.9C1424.8 288.0 1421.1 278.8 1418.5 273.4C1415.9 267.9 1413.5 261.8 1413.2 259.8C1413.0 257.7 1412.1 255.5 1411.4 254.9C1410.6 254.3 1410.0 253.0 1410.0 252.1C1410.0 251.2 1409.1 248.8 1408.0 246.7C1406.9 244.7 1406.0 242.5 1406.0 241.9C1406.0 241.3 1405.0 238.2 1403.7 235.1C1402.4 232.0 1400.1 225.8 1398.6 221.2C1397.1 216.7 1394.3 210.0 1392.4 206.4C1390.5 202.8 1389.0 199.2 1389.0 198.4C1389.0 197.6 1388.2 195.3 1387.1 193.2C1386.1 191.2 1384.1 186.1 1382.7 182.0C1381.3 177.9 1378.7 171.8 1377.1 168.5C1375.4 165.2 1374.0 161.7 1374.0 160.8C1374.0 159.9 1373.5 158.8 1373.0 158.5C1372.5 158.2 1372.0 156.5 1372.0 154.9C1372.0 153.3 1370.2 148.3 1368.1 143.7C1365.9 139.2 1362.6 131.0 1360.7 125.5C1356.7 114.2 1353.1 105.3 1350.1 99.5C1348.9 97.4 1348.0 94.9 1348.0 94.0C1348.0 93.2 1346.6 88.9 1344.9 84.5C1343.2 80.1 1341.6 75.6 1341.3 74.5C1341.0 73.4 1340.3 71.9 1339.7 71.2C1337.7 68.6 1338.9 49.3 1341.3 44.6C1347.0 33.5 1350.5 29.6 1358.1 25.7C1362.2 23.7 1366.2 22.0 1367.1 22.0C1368.0 22.0 1370.1 21.3 1371.9 20.4C1378.5 17.1 1395.4 21.5 1405.6 29.2C1410.8 33.1 1411.7 34.4 1418.0 47.5C1421.7 55.2 1425.0 62.9 1425.4 64.5C1426.0 67.2 1428.3 73.4 1435.7 92.0C1437.1 95.6 1440.1 103.9 1442.5 110.5C1444.8 117.1 1447.1 123.4 1447.7 124.5C1448.3 125.6 1450.0 130.1 1451.5 134.5C1455.3 145.8 1458.8 155.1 1460.5 158.2C1461.3 159.6 1462.0 161.6 1462.0 162.6C1462.0 163.5 1462.7 165.1 1463.6 166.1C1464.4 167.0 1466.4 172.2 1467.9 177.7C1469.5 183.1 1471.7 189.1 1472.9 191.1C1474.0 193.0 1475.8 197.1 1476.9 200.1C1477.9 203.1 1479.4 207.3 1480.3 209.5C1481.1 211.7 1482.8 216.7 1484.0 220.5C1485.3 224.3 1487.1 228.6 1488.0 230.0C1489.5 232.2 1493.0 241.7 1498.7 259.0C1499.5 261.5 1501.8 267.3 1503.7 272.0C1505.6 276.7 1507.7 282.3 1508.2 284.5C1508.8 286.7 1509.8 289.6 1510.5 291.0C1511.2 292.4 1513.0 296.6 1514.4 300.5C1515.9 304.4 1517.9 309.3 1518.9 311.5C1519.9 313.7 1521.3 317.5 1522.0 320.0C1524.4 328.6 1528.2 338.0 1530.6 341.5C1531.9 343.5 1533.0 346.2 1533.0 347.5C1533.0 349.6 1536.0 358.1 1543.5 377.0C1544.5 379.5 1547.1 386.6 1549.4 392.9C1553.9 405.5 1555.4 407.3 1559.3 404.7C1561.1 403.6 1562.6 400.5 1565.0 393.3C1566.8 387.9 1569.9 380.1 1572.0 375.9C1574.0 371.8 1576.0 366.6 1576.4 364.5C1576.8 362.3 1578.0 358.9 1579.1 356.8C1580.1 354.8 1581.0 352.6 1581.0 352.1C1581.0 351.6 1582.6 347.8 1584.5 343.8C1586.4 339.8 1589.5 332.0 1591.4 326.5C1594.9 316.4 1600.6 301.9 1604.0 294.5C1607.8 286.2 1609.0 282.9 1609.0 281.0C1609.0 280.0 1610.5 276.0 1612.4 272.3C1614.2 268.6 1616.3 263.7 1617.0 261.5C1618.7 255.9 1623.0 245.0 1624.6 242.0C1626.3 239.0 1630.7 227.2 1632.4 220.9C1634.0 215.3 1638.4 204.1 1641.5 198.0C1642.7 195.5 1644.5 190.3 1645.5 186.5C1646.5 182.7 1648.0 178.6 1648.7 177.5C1649.4 176.4 1650.5 173.8 1651.0 171.8C1651.6 169.8 1653.6 165.4 1655.5 162.0C1657.4 158.7 1659.2 154.3 1659.6 152.2C1660.0 150.2 1661.1 147.2 1662.2 145.5C1663.2 143.9 1664.0 141.7 1664.0 140.7C1664.0 138.9 1668.1 128.2 1670.1 124.6C1671.6 122.0 1675.0 112.3 1675.9 108.0C1676.3 106.1 1677.4 103.4 1678.2 102.0C1679.8 99.6 1682.1 93.8 1687.3 80.0C1692.7 65.7 1694.0 62.6 1695.0 61.6C1695.5 61.1 1696.0 59.8 1696.0 58.9C1696.0 57.9 1697.1 55.0 1698.5 52.4C1699.9 49.8 1701.0 46.7 1701.0 45.5C1701.0 41.8 1709.1 31.9 1716.7 26.3C1721.7 22.6 1734.3 19.0 1739.8 19.6C1749.5 20.8 1763.3 27.1 1767.1 32.0C1773.1 39.6 1774.0 41.0 1776.0 45.9C1778.4 52.2 1778.8 66.0 1776.5 70.0C1775.7 71.4 1775.1 73.7 1775.0 75.1C1775.0 76.5 1773.9 79.8 1772.5 82.4C1771.1 85.0 1770.0 87.8 1770.0 88.6C1770.0 90.8 1764.5 106.3 1762.1 110.6C1758.9 116.6 1754.3 127.9 1751.4 137.1C1749.9 141.7 1747.9 146.6 1746.9 148.0C1745.9 149.4 1742.8 156.6 1740.1 164.1C1737.3 171.6 1734.1 179.4 1732.9 181.4C1731.7 183.5 1729.7 188.6 1728.5 192.8C1725.9 201.6 1722.5 209.8 1720.5 212.0C1719.8 212.8 1718.5 215.9 1717.6 218.9C1716.7 221.8 1715.5 224.9 1714.9 225.6C1714.3 226.3 1713.4 228.4 1713.0 230.2C1711.3 236.5 1708.2 244.5 1704.8 251.0C1702.9 254.6 1701.0 259.2 1700.6 261.1C1700.3 263.1 1698.7 267.4 1697.1 270.6C1695.6 273.9 1692.8 279.9 1691.1 284.0C1689.3 288.1 1687.3 293.0 1686.5 294.8C1685.7 296.6 1685.0 299.2 1685.0 300.6C1685.0 302.1 1682.6 308.2 1679.6 314.4C1676.6 320.5 1673.4 328.0 1672.5 331.0C1671.5 334.0 1669.5 338.8 1667.9 341.6C1666.3 344.4 1665.0 347.5 1665.0 348.4C1665.0 349.3 1664.4 351.1 1663.6 352.3C1662.9 353.5 1661.3 357.6 1660.0 361.5C1658.8 365.4 1656.1 372.1 1654.0 376.5C1651.9 380.9 1649.8 385.5 1649.5 386.8C1649.1 388.1 1647.3 392.5 1645.4 396.6C1643.5 400.7 1642.0 404.9 1642.0 405.8C1642.0 406.7 1640.6 410.4 1638.9 414.0C1637.2 417.6 1635.0 422.8 1634.0 425.5C1630.4 435.3 1626.9 443.1 1624.4 446.7C1623.1 448.7 1621.7 451.5 1621.4 452.9C1621.1 454.3 1620.4 456.2 1619.9 457.0C1619.4 457.8 1618.2 460.1 1617.4 462.0C1616.5 463.9 1614.2 467.8 1612.4 470.6C1610.5 473.4 1609.0 476.4 1609.0 477.2C1609.0 481.4 1585.6 506.0 1581.7 506.0C1580.8 506.0 1577.1 507.1 1573.3 508.4C1565.9 511.0 1554.4 512.2 1546.5 511.1Z"/><path id="p3" d="M2132.5 625.0C2131.4 624.5 2128.2 624.1 2125.3 624.1C2111.3 623.9 2092.4 606.9 2086.6 589.4C2084.3 582.4 2085.2 563.8 2088.1 559.8C2089.1 558.3 2090.0 556.7 2090.0 556.2C2090.0 555.7 2091.3 553.6 2093.0 551.5C2094.7 549.4 2096.0 547.2 2096.0 546.6C2096.0 544.3 2111.4 531.5 2112.9 532.5C2113.4 532.7 2116.4 532.0 2119.6 530.8C2132.3 526.1 2148.4 528.6 2158.3 536.7C2159.9 538.0 2161.6 539.0 2162.1 539.0C2165.2 539.0 2173.2 550.7 2177.2 560.8C2187.3 586.9 2169.1 620.2 2142.5 624.1C2139.8 624.5 2136.8 625.0 2136.0 625.3C2135.2 625.6 2133.6 625.5 2132.5 625.0ZM2341.5 624.4C2333.0 623.1 2328.9 621.8 2323.1 618.3C2315.7 613.9 2306.6 604.3 2304.9 599.1C2304.3 597.1 2303.4 595.0 2303.0 594.5C2301.7 592.9 2299.0 581.1 2299.0 577.5C2299.0 559.0 2310.6 540.8 2327.8 532.1C2346.9 522.5 2377.4 532.5 2386.8 551.4C2388.0 553.9 2390.0 558.0 2391.2 560.5C2394.6 567.3 2394.6 587.7 2391.2 593.3C2390.0 595.4 2389.0 597.7 2389.0 598.4C2389.0 603.0 2373.3 618.0 2364.2 622.0C2359.8 624.0 2347.4 625.3 2341.5 624.4ZM2205.0 511.1C2187.0 509.5 2142.4 497.9 2137.0 493.5C2136.2 492.8 2134.4 491.9 2133.0 491.5C2130.8 490.8 2114.2 483.2 2110.0 481.0C2102.8 477.1 2088.8 467.7 2085.1 464.3C2082.6 462.0 2078.6 458.8 2076.3 457.3C2071.0 453.7 2055.0 439.9 2055.0 438.8C2055.0 438.4 2053.8 436.7 2052.2 435.1C2050.7 433.5 2048.4 430.8 2047.0 429.0C2044.1 425.3 2037.3 417.3 2034.7 414.5C2032.6 412.3 2023.7 398.9 2020.4 393.2C2019.2 391.2 2017.4 387.9 2016.2 386.0C2014.5 383.1 2010.5 375.2 2003.4 360.7C2002.6 359.1 2002.0 357.3 2002.0 356.6C2002.0 356.0 2001.1 353.6 2000.0 351.5C1997.0 345.6 1989.3 322.6 1987.6 314.5C1986.8 310.6 1984.1 301.5 1981.6 294.1C1979.1 286.8 1977.0 279.5 1977.0 278.0C1977.0 276.4 1976.1 272.3 1975.0 268.8C1973.9 265.4 1973.0 261.4 1973.0 260.0C1973.0 258.6 1972.1 254.3 1971.1 250.5C1968.6 241.4 1966.2 230.5 1964.5 220.3C1963.7 215.7 1962.9 211.6 1962.5 211.1C1962.2 210.6 1961.3 205.5 1960.5 199.8C1959.7 194.1 1958.4 186.3 1957.5 182.5C1956.6 178.7 1955.5 172.2 1955.0 168.2C1954.5 164.3 1953.4 159.8 1952.6 158.2C1951.9 156.7 1950.0 149.2 1948.6 141.5C1944.3 119.0 1938.4 109.0 1925.6 102.6C1919.5 99.6 1919.5 99.6 1890.5 99.0C1860.8 98.4 1859.3 98.2 1854.6 94.1C1851.0 91.0 1850.7 87.9 1850.5 59.7C1850.3 29.1 1850.5 27.7 1857.0 24.2C1861.7 21.8 1925.5 23.2 1935.5 25.9C1945.0 28.6 1956.8 34.0 1962.6 38.4C1974.1 47.2 1988.0 65.5 1988.0 71.8C1988.0 72.8 1988.9 75.4 1990.1 77.5C1992.7 82.4 1994.7 97.6 1996.0 122.0C1996.5 131.6 1997.4 141.4 1998.1 143.7C1998.7 146.0 1998.9 148.3 1998.5 148.9C1997.5 150.6 1998.9 155.8 2000.6 156.4C2001.5 156.7 2002.9 156.6 2003.9 156.1C2005.7 155.1 2011.0 145.8 2011.0 143.5C2011.0 141.5 2019.3 125.8 2024.0 118.9C2025.4 116.9 2027.8 113.3 2029.5 110.9C2031.1 108.5 2034.3 104.2 2036.6 101.5C2038.9 98.8 2041.7 95.0 2042.8 93.2C2048.5 83.7 2084.2 51.3 2098.6 42.5C2113.1 33.7 2119.8 30.2 2127.0 27.5C2128.9 26.8 2133.9 24.6 2138.1 22.6C2142.3 20.6 2147.0 19.0 2148.4 19.0C2149.9 19.0 2152.8 18.1 2154.8 17.1C2159.3 14.7 2176.8 10.0 2181.2 10.0C2182.9 10.0 2187.6 9.1 2191.4 8.1C2201.2 5.4 2228.9 3.5 2244.2 4.4C2263.8 5.6 2265.1 5.7 2273.7 7.9C2278.2 9.1 2283.3 10.0 2285.0 10.0C2288.4 10.0 2302.0 13.8 2310.5 17.1C2313.3 18.1 2316.3 19.0 2317.3 19.0C2318.3 19.0 2322.9 20.8 2327.6 23.0C2332.3 25.2 2336.5 27.0 2337.0 27.0C2338.3 27.0 2359.0 38.3 2363.6 41.6C2381.2 54.1 2388.1 59.6 2400.4 71.0C2407.1 77.2 2408.2 78.3 2416.1 88.0C2419.9 92.7 2424.5 98.3 2426.3 100.5C2429.3 104.2 2441.0 123.1 2441.0 124.3C2441.0 124.6 2443.0 128.1 2445.5 132.1C2448.0 136.1 2450.0 139.8 2450.0 140.3C2450.0 141.3 2455.5 154.5 2457.1 157.4C2459.5 161.6 2464.9 178.1 2466.9 187.5C2468.1 193.0 2469.8 200.0 2470.7 203.0C2477.9 227.7 2478.4 291.5 2471.7 312.7C2470.8 315.3 2468.7 323.4 2466.9 330.5C2465.1 337.6 2462.2 346.9 2460.4 351.0C2458.6 355.1 2455.5 362.6 2453.5 367.5C2449.1 378.3 2448.5 379.6 2439.6 394.7C2431.3 408.9 2430.0 410.7 2419.0 423.5C2414.2 429.0 2409.9 434.2 2409.4 435.1C2408.2 437.2 2387.3 456.7 2383.4 459.4C2381.7 460.5 2376.9 464.0 2372.9 467.2C2364.7 473.4 2362.7 474.7 2349.5 481.7C2337.4 488.1 2324.0 494.3 2315.5 497.3C2311.7 498.7 2304.5 501.3 2299.7 503.0C2294.8 504.8 2287.9 506.6 2284.2 507.1C2280.5 507.6 2275.2 508.7 2272.5 509.6C2266.8 511.4 2220.2 512.4 2205.0 511.1ZM2274.5 402.0C2290.2 396.4 2307.7 387.3 2314.3 381.3C2315.5 380.2 2317.6 378.7 2318.9 378.0C2327.3 373.7 2346.2 349.9 2354.3 333.5C2362.0 318.0 2362.5 316.6 2367.9 295.5C2371.6 280.7 2373.6 248.3 2371.1 241.7C2370.6 240.3 2369.7 235.1 2369.1 230.2C2368.6 225.2 2367.6 220.1 2367.0 219.0C2366.4 217.8 2365.5 214.4 2365.0 211.3C2364.0 205.5 2362.6 201.5 2359.0 194.8C2357.9 192.8 2357.0 190.5 2357.0 189.8C2357.0 187.3 2350.6 175.4 2343.5 164.9C2338.6 157.6 2313.1 133.5 2307.6 131.0C2305.7 130.1 2303.6 128.9 2302.9 128.3C2302.1 127.7 2297.7 125.4 2293.0 123.1C2288.3 120.7 2283.6 118.4 2282.5 117.8C2281.4 117.2 2275.4 115.2 2269.0 113.3C2245.3 106.4 2203.3 108.2 2181.9 117.1C2174.0 120.4 2155.3 130.4 2153.0 132.4C2151.6 133.7 2149.2 135.6 2147.5 136.6C2141.7 140.1 2128.2 153.1 2122.5 160.5C2119.3 164.6 2116.4 168.0 2116.0 168.0C2114.9 168.0 2111.3 174.1 2107.5 182.0C2105.8 185.6 2102.8 191.9 2100.7 196.1C2098.7 200.3 2096.4 206.6 2095.6 210.1C2094.8 213.6 2093.6 218.8 2093.0 221.5C2092.4 224.2 2091.1 229.4 2090.2 233.0C2088.1 241.1 2088.0 271.8 2090.0 282.5C2094.5 306.6 2103.8 330.7 2115.1 347.6C2120.6 355.8 2140.2 376.0 2145.1 378.5C2147.0 379.5 2148.7 380.6 2149.0 381.0C2150.8 383.8 2166.1 392.6 2178.0 397.6C2198.8 406.4 2202.1 406.9 2237.0 406.6C2262.5 406.3 2262.5 406.3 2274.5 402.0Z"/></defs></svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#" aria-label="mavo — bosh sahifa"><svg class="lg " viewBox="0 0 2477 626" role="img" aria-label="mavo"><use class="l l0" href="#p0"/><use class="l l1" href="#p1"/><use class="l l2" href="#p2"/><use class="l l3" href="#p3"/></svg></a>
+    <nav class="nav" id="nav" aria-label="Asosiy menyu">
+      <a href="#shop">Do'kon</a><a href="#about">Biz haqimizda</a><a href="#delivery">Yetkazib berish</a><a href="#faq">Savol-javob</a><a href="#contact">Aloqa</a>
+    </nav>
+    <label class="search"><input id="q" type="search" placeholder="Mahsulot qidirish…" aria-label="Mahsulot qidirish"></label>
+    <button class="burger" id="burger" aria-label="Menyu" aria-expanded="false"><span></span></button>
+    <button class="cartbtn" id="openCart" aria-label="Savatni ochish">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2 11h10l2-8H7"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="17" cy="20" r="1" fill="currentColor"/></svg>
+      <span class="badge" id="count">0</span>
+    </button>
+  </div>
+</header>
+
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="logo hero-logo"><svg class="lg " viewBox="0 0 2477 626" role="img" aria-label="mavo"><use class="l l0" href="#p0"/><use class="l l1" href="#p1"/><use class="l l2" href="#p2"/><use class="l l3" href="#p3"/></svg></div>
+      <p>Kerakli narsalar bir joyda. Tanlang, savatga soling, uyingizgacha olib boramiz.</p>
+      <a class="cta" href="#shop">Xarid qilish</a>
+    </div>
+  </div>
+
+  <section class="promo" aria-label="Reklama">
+    <div class="wrap">
+      <div class="slider" id="slider" aria-roledescription="karusel">
+        <div class="track" id="track"></div>
+        <button class="sn pv" id="pv" aria-label="Oldingi">‹</button>
+        <button class="sn nx" id="nx" aria-label="Keyingi">›</button>
+        <div class="sd" id="sd"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="wrap">
+      <h2>Mahsulotlar</h2>
+      <div class="cats" id="cats" role="group" aria-label="Kategoriyalar"></div>
+      <div class="grid" id="grid"></div>
+
+    </div>
+  </section>
+
+  <section id="about" class="pg">
+    <div class="wrap two">
+      <div>
+        <h2>Biz haqimizda</h2>
+        <p class="lead">mavo — kerakli narsalarni bir joyga yig'gan onlayn do'kon. Mahsulotni tanlaysiz, savatga solasiz, qolganini biz qilamiz.</p>
+        <p class="lead">Narxni ochiq ko'rsatamiz, buyurtmani jo'natishdan oldin tekshiramiz va savol tug'ilsa, tez javob beramiz.</p>
+      </div>
+      <ul class="pledge">
+        <li><b>Narx ochiq</b>Savatda ko'rgan narxingiz oxirgi narx.</li>
+        <li><b>Tekshirib jo'natamiz</b>Har bir buyurtma yo'lga chiqishdan oldin ko'zdan kechiriladi.</li>
+        <li><b>Aloqada turamiz</b>Telegram yoki telefon orqali javob beramiz.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="delivery" class="pg">
+    <div class="wrap">
+      <h2>Yetkazib berish va to'lov</h2>
+      <dl class="terms">
+        <div><dt>Yetkazib berish muddati</dt><dd>Shahar bo'ylab buyurtmadan keyin 1–2 kun ichida.</dd></div>
+        <div><dt>Yetkazib berish narxi</dt><dd>Buyurtma qabul qilinganda operator aytadi.</dd></div>
+        <div><dt>To'lov</dt><dd>Naqd pul yoki karta orqali, mahsulotni qabul qilganda.</dd></div>
+        <div><dt>Almashtirish va qaytarish</dt><dd>Mahsulot yoqmasa yoki nuqsoni bo'lsa, 3 kun ichida murojaat qiling.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="faq" class="pg">
+    <div class="wrap narrow">
+      <h2>Ko'p so'raladigan savollar</h2>
+      <div class="faq">
+        <details><summary>Buyurtmani qanday beraman?</summary><p>Mahsulotni savatga soling, savatda ism va telefon raqamingizni yozing. «Buyurtma berish» tugmasi buyurtmani Telegram orqali bizga yuboradi. Keyin operator siz bilan bog'lanadi.</p></details>
+        <details><summary>Buyurtma qancha vaqtda keladi?</summary><p>Shahar bo'ylab odatda 1–2 kun ichida. Aniq vaqtni operator buyurtmani tasdiqlaganda aytadi.</p></details>
+        <details><summary>Qanday to'lash mumkin?</summary><p>Mahsulotni qabul qilganingizda naqd pul yoki karta orqali to'laysiz. Oldindan to'lov talab qilinmaydi.</p></details>
+        <details><summary>Mahsulot yoqmasa nima qilaman?</summary><p>3 kun ichida bizga Telegram yoki telefon orqali yozing. Mahsulotni almashtirib yoki qaytarib beramiz.</p></details>
+        <details><summary>Mahsulot mavjudligini qayerdan bilaman?</summary><p>Saytdagi mahsulotlar sotuvda. Agar biror narsa tugagan bo'lsa, operator buyurtmani tasdiqlashda aytadi.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="pg">
+    <div class="wrap two">
+      <div>
+        <h2>Aloqa</h2>
+        <ul class="contacts">
+          <li><span>Telefon</span><a data-site="phone" data-href="tel"></a></li>
+          <li><span>Telegram</span><a data-site="telegram" data-href="tg" target="_blank" rel="noopener"></a></li>
+          <li data-if="instagram"><span>Instagram</span><a data-site="instagram" data-href="ig" target="_blank" rel="noopener"></a></li>
+          <li data-if="address"><span>Manzil</span><b data-site="address"></b></li>
+          <li><span>Ish vaqti</span><b data-site="hours"></b></li>
+        </ul>
+        <a class="map" data-if="mapUrl" data-href="map" target="_blank" rel="noopener">Xaritada ochish</a>
+      </div>
+      <div class="cform">
+        <h3>Savolingiz bormi?</h3>
+        <input id="cn" placeholder="Ismingiz" autocomplete="name">
+        <input id="cp" placeholder="Telefon raqamingiz" inputmode="tel" autocomplete="tel">
+        <textarea id="cm" rows="4" placeholder="Xabaringiz"></textarea>
+        <button class="send" id="cs" type="button">Telegramda yuborish</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap fg">
+    <div class="logo"><svg class="lg " viewBox="0 0 2477 626" role="img" aria-label="mavo"><use class="l l0" href="#p0"/><use class="l l1" href="#p1"/><use class="l l2" href="#p2"/><use class="l l3" href="#p3"/></svg></div>
+    <nav aria-label="Pastki menyu"><a href="#shop">Do'kon</a><a href="#about">Biz haqimizda</a><a href="#delivery">Yetkazib berish</a><a href="#faq">Savol-javob</a><a href="#contact">Aloqa</a></nav>
+    <div class="fc"><a data-site="phone" data-href="tel"></a><a data-site="telegram" data-href="tg" target="_blank" rel="noopener"></a><a data-if="instagram" data-site="instagram" data-href="ig" target="_blank" rel="noopener"></a></div>
+  </div>
+  <div class="wrap legal">
+    <span id="req"></span>
+    <span><button data-dlg="offer">Ommaviy oferta</button><button data-dlg="privacy">Maxfiylik siyosati</button></span>
+    <span>© 2026 mavo. Barcha huquqlar himoyalangan.</span>
+  </div>
+</footer>
+
+<dialog id="offer"><form method="dialog"><h2>Ommaviy oferta</h2>
+<p>Ushbu sahifa namuna matn. Rasmiy matnni yurist yoki buxgalter bilan tayyorlab, shu yerga qo'ying.</p>
+<p>Odatda oferta quyidagilarni o'z ichiga oladi: sotuvchi haqida ma'lumot, buyurtma berish tartibi, narx va to'lov, yetkazib berish, almashtirish va qaytarish shartlari.</p>
+<button class="send">Yopish</button></form></dialog>
+<dialog id="privacy"><form method="dialog"><h2>Maxfiylik siyosati</h2>
+<p>Ushbu sahifa namuna matn. Rasmiy matnni yurist bilan tayyorlab, shu yerga qo'ying.</p>
+<p>Sayt buyurtma uchun faqat siz kiritgan ism va telefon raqamidan foydalanadi. Ma'lumot buyurtmani bajarish uchun Telegram orqali do'konga yuboriladi.</p>
+<button class="send">Yopish</button></form></dialog>
+
+<div class="shade" id="shade"></div>
+<aside class="drawer" id="drawer" aria-label="Savat">
+  <div class="dh"><h2>Savat</h2><button class="x" id="closeCart" aria-label="Yopish">✕</button></div>
+  <div class="items" id="items"></div>
+  <div class="foot">
+    <div class="tot"><span>Jami</span><span id="total">0 so'm</span></div>
+    <input id="name" placeholder="Ismingiz" autocomplete="name">
+    <input id="phone" placeholder="Telefon raqamingiz" inputmode="tel" autocomplete="tel">
+    <button class="send" id="send" disabled>Buyurtma berish</button>
+    <p class="hint">Buyurtma Telegram orqali do'konga yuboriladi</p>
+  </div>
+</aside>
+
+<script>
+/* ====== SAYT MA'LUMOTLARI: hammasini shu yerdan o'zgartiring ====== */
+const SITE = {
+  phone:"+998 90 000 00 00",
+  telegram:"mavo_uz",          // @ belgisiz
+  instagram:"",                // masalan "mavo.uz" (bo'sh qolsa ko'rinmaydi)
+  address:"",                  // masalan "Toshkent sh., Chilonzor t., ..." (bo'sh qolsa ko'rinmaydi)
+  hours:"Har kuni 09:00–21:00",
+  mapUrl:"",                   // Google/Yandex xarita havolasi (bo'sh qolsa ko'rinmaydi)
+  legalName:"",                // masalan "MAVO MChJ" (bo'sh qolsa ko'rinmaydi)
+  inn:""                       // STIR (bo'sh qolsa ko'rinmaydi)
+};
+const TELEGRAM = SITE.telegram;
+/* ====== SOZLAMALAR ====== */
+/* Mahsulotlarni shu ro'yxatdan o'zgartiring/qo'shing */
+const PRODUCTS = [
+  {id:1,name:"Simsiz quloqchin",cat:"Elektronika",price:189000,old:249000,icon:"🎧",tag:"Chegirma"},
+  {id:2,name:"Aqlli soat",cat:"Elektronika",price:329000,icon:"⌚"},
+  {id:3,name:"Sport krossovka",cat:"Kiyim",price:275000,icon:"👟",tag:"Yangi"},
+  {id:4,name:"Paxta futbolka",cat:"Kiyim",price:79000,icon:"👕"},
+  {id:5,name:"Keramik chashka",cat:"Uy-ro'zg'or",price:45000,icon:"☕"},
+  {id:6,name:"Stol chirog'i",cat:"Uy-ro'zg'or",price:119000,old:149000,icon:"💡",tag:"Chegirma"},
+  {id:7,name:"Yuz uchun krem",cat:"Go'zallik",price:98000,icon:"🧴"},
+  {id:8,name:"Sumka-ryukzak",cat:"Kiyim",price:215000,icon:"🎒",tag:"Yangi"}
+];
+/* ================================================= */
+/* ====== REKLAMA BANERLARI: shu yerdan o'zgartiring ======
+   theme: "blue" | "deep" | "soft"
+   rasm qo'shmoqchi bo'lsangiz: img:"rasm.jpg" (icon o'rniga ko'rinadi) */
+const BANNERS = [
+  {theme:"blue",tag:"Aksiya",title:"Simsiz quloqchin −24%",text:"Musiqa sizga ergashadi. Aksiya shu haftada.",price:189000,old:249000,icon:"🎧",link:"#shop"},
+  {theme:"soft",tag:"Yangi",title:"Yangi kolleksiya krossovkalar",text:"Yengil, qulay va har kunga mos.",price:275000,icon:"👟",link:"#shop"},
+  {theme:"deep",tag:"Sovg'a",title:"Uyingizga iliqlik olib keling",text:"Chiroqlar va idishlar, yetkazib berish bepul.",price:45000,icon:"💡",link:"#shop"}
+];
+
+const $=s=>document.querySelector(s);
+const fmt=n=>n.toLocaleString("ru-RU").replace(/\u00a0/g," ")+" so'm";
+let cart={}, cat="Hammasi", term="";
+try{cart=JSON.parse(localStorage.getItem("mavo-cart")||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem("mavo-cart",JSON.stringify(cart))}catch(e){}};
+
+const cats=["Hammasi",...new Set(PRODUCTS.map(p=>p.cat))];
+$("#cats").innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join("");
+$("#cats").addEventListener("click",e=>{
+  const b=e.target.closest(".chip"); if(!b) return;
+  cat=b.dataset.c;
+  document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  render();
+});
+$("#q").addEventListener("input",e=>{term=e.target.value.trim().toLowerCase();render()});
+
+function render(){
+  const list=PRODUCTS.filter(p=>(cat==="Hammasi"||p.cat===cat)&&p.name.toLowerCase().includes(term));
+  $("#grid").innerHTML=list.length?list.map(p=>`
+    <article class="card">
+      <div class="pic">${p.tag?`<span class="tag">${p.tag}</span>`:""}<span aria-hidden="true">${p.icon}</span></div>
+      <h3>${p.name}</h3><div class="meta">${p.cat}</div>
+      <div class="row"><div class="price">${fmt(p.price)}${p.old?`<s>${fmt(p.old)}</s>`:""}</div></div>
+      <div class="row"><button class="add" data-id="${p.id}">Savatga</button></div>
+    </article>`).join(""):`<p class="empty">Hech narsa topilmadi. Boshqa so'z bilan qidirib ko'ring.</p>`;
+}
+$("#grid").addEventListener("click",e=>{
+  const b=e.target.closest(".add"); if(!b) return;
+  const id=b.dataset.id; cart[id]=(cart[id]||0)+1; save(); update();
+  b.textContent="Qo'shildi"; b.classList.add("ok");
+  setTimeout(()=>{b.textContent="Savatga";b.classList.remove("ok")},1100);
+  const c=$("#openCart"); c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
+});
+
+function update(){
+  const ids=Object.keys(cart).filter(id=>cart[id]>0);
+  const n=ids.reduce((s,id)=>s+cart[id],0);
+  const sum=ids.reduce((s,id)=>s+cart[id]*PRODUCTS.find(p=>p.id==id).price,0);
+  $("#count").textContent=n; $("#total").textContent=fmt(sum);
+  $("#items").innerHTML=ids.length?ids.map(id=>{const p=PRODUCTS.find(x=>x.id==id);return `
+    <div class="it"><div class="t">${p.icon}</div>
+    <div class="n"><b>${p.name}</b><span>${fmt(p.price*cart[id])}</span></div>
+    <div class="q"><button data-d="-1" data-id="${id}" aria-label="Kamaytirish">−</button><em>${cart[id]}</em><button data-d="1" data-id="${id}" aria-label="Ko'paytirish">+</button></div></div>`}).join("")
+    :`<p class="empty">Savat hozircha bo'sh. Yoqqan mahsulotni tanlang.</p>`;
+  check();
+}
+$("#items").addEventListener("click",e=>{
+  const b=e.target.closest("[data-d]"); if(!b) return;
+  const id=b.dataset.id; cart[id]=Math.max(0,(cart[id]||0)+Number(b.dataset.d));
+  if(!cart[id]) delete cart[id]; save(); update();
+});
+function check(){
+  $("#send").disabled=!(Object.keys(cart).length&&$("#name").value.trim()&&$("#phone").value.trim().length>=7);
+}
+["#name","#phone"].forEach(s=>$(s).addEventListener("input",check));
+$("#send").addEventListener("click",()=>{
+  const lines=Object.keys(cart).map(id=>{const p=PRODUCTS.find(x=>x.id==id);return `• ${p.name} × ${cart[id]} = ${fmt(p.price*cart[id])}`});
+  const sum=Object.keys(cart).reduce((s,id)=>s+cart[id]*PRODUCTS.find(p=>p.id==id).price,0);
+  const msg=`Yangi buyurtma (mavo)\n${lines.join("\n")}\nJami: ${fmt(sum)}\nIsm: ${$("#name").value.trim()}\nTelefon: ${$("#phone").value.trim()}`;
+  window.open(`https://t.me/${TELEGRAM}?text=${encodeURIComponent(msg)}`,"_blank");
+  cart={}; save(); update(); toggle(false);
+});
+
+const toggle=o=>{document.body.classList.toggle("open",o)};
+$("#openCart").onclick=()=>toggle(true);
+$("#closeCart").onclick=$("#shade").onclick=()=>toggle(false);
+addEventListener("keydown",e=>{if(e.key==="Escape")toggle(false)});
+
+
+/* baner karuseli */
+(()=>{
+  const track=$("#track"),sd=$("#sd");let i=0,timer;
+  track.innerHTML=BANNERS.map(b=>`<div class="slide t-${b.theme}"><div><span class="k">${b.tag}</span><h3>${b.title}</h3><p>${b.text}</p>
+    <div class="pr">${fmt(b.price)}${b.old?`<s>${fmt(b.old)}</s>`:""}</div><a class="go" href="${b.link||"#shop"}">Xarid qilish</a></div>
+    <div class="art">${b.img?`<img src="${b.img}" alt="">`:`<span aria-hidden="true">${b.icon}</span>`}</div></div>`).join("");
+  sd.innerHTML=BANNERS.map((_,k)=>`<button aria-label="${k+1}-baner" data-k="${k}"></button>`).join("");
+  const go=n=>{i=(n+BANNERS.length)%BANNERS.length;track.style.transform=`translateX(${-100*i}%)`;
+    sd.querySelectorAll("button").forEach((d,k)=>d.setAttribute("aria-current",k===i));};
+  const play=()=>{stop();if(!matchMedia("(prefers-reduced-motion:reduce)").matches)timer=setInterval(()=>go(i+1),5000)};
+  const stop=()=>clearInterval(timer);
+  $("#nx").onclick=()=>{go(i+1);play()};$("#pv").onclick=()=>{go(i-1);play()};
+  sd.onclick=e=>{const b=e.target.closest("button");if(b){go(+b.dataset.k);play()}};
+  const sl=$("#slider");sl.onmouseenter=stop;sl.onmouseleave=play;sl.onfocusin=stop;sl.onfocusout=play;
+  let x0=null;sl.addEventListener("touchstart",e=>x0=e.touches[0].clientX,{passive:true});
+  sl.addEventListener("touchend",e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40){go(i+(d<0?1:-1));play()}x0=null});
+  go(0);play();
+})();
+
+/* sayt ma'lumotlarini joylash */
+(()=>{
+  const href={tel:v=>"tel:"+v.replace(/[^+\d]/g,""),tg:v=>"https://t.me/"+v,ig:v=>"https://instagram.com/"+v,map:v=>v};
+  const key={tel:"phone",tg:"telegram",ig:"instagram",map:"mapUrl"};
+  document.querySelectorAll("[data-if]").forEach(e=>{if(!SITE[e.dataset.if])e.remove()});
+  document.querySelectorAll("[data-site]").forEach(e=>{const v=SITE[e.dataset.site];e.textContent=e.dataset.site==="telegram"||e.dataset.site==="instagram"?"@"+v:v});
+  document.querySelectorAll("[data-href]").forEach(e=>{const t=e.dataset.href;e.href=href[t](SITE[key[t]])});
+  $("#req").textContent=[SITE.legalName,SITE.inn&&"STIR: "+SITE.inn].filter(Boolean).join(" · ");
+  const nav=$("#nav"),bg=$("#burger");
+  const close=()=>{nav.classList.remove("on");bg.setAttribute("aria-expanded","false")};
+  bg.onclick=()=>{const o=nav.classList.toggle("on");bg.setAttribute("aria-expanded",o)};
+  nav.addEventListener("click",e=>{if(e.target.closest("a"))close()});
+  document.querySelectorAll("[data-dlg]").forEach(b=>b.onclick=()=>document.getElementById(b.dataset.dlg).showModal());
+  document.querySelectorAll("dialog").forEach(d=>d.addEventListener("click",e=>{if(e.target===d)d.close()}));
+  $("#cs").onclick=()=>{
+    const n=$("#cn").value.trim(),p=$("#cp").value.trim(),m=$("#cm").value.trim();
+    if(!n||p.length<7||!m){alert("Ism, telefon va xabarni to'ldiring.");return}
+    window.open(`https://t.me/${SITE.telegram}?text=${encodeURIComponent(`Savol (mavo sayti)\nIsm: ${n}\nTelefon: ${p}\n${m}`)}`,"_blank");
+  };
+})();
+
+render(); update();
+</script>
+</body>
+</html>
