@@ -438,10 +438,12 @@ let BANNERS = [
 /* ====== BAZADAN YUKLASH (Supabase ulangan bo'lsa) ====== */
 const CFG=window.MAVO||{};let SB=null;
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const cleanUrl=u=>{u=String(u||"").replace(/[\s"'“”‘’]/g,"");if(u&&!/^https?:\/\//i.test(u))u=u.includes(".")?"https://"+u:"https://"+u+".supabase.co";return u.replace(/\/(rest|auth|storage)\/v1.*$/i,"").replace(/\/+$/,"")};
+const cleanKey=k=>String(k||"").replace(/[\s"'“”‘’]/g,"");
 async function loadDB(){
   if(!CFG.SUPABASE_URL||!CFG.SUPABASE_KEY||!window.supabase)return null;
   try{
-    const sb=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_KEY);
+    const sb=window.supabase.createClient(cleanUrl(CFG.SUPABASE_URL),cleanKey(CFG.SUPABASE_KEY));
     const [p,b,st]=await Promise.all([
       sb.from("products").select("*").eq("active",true).order("sort").order("id"),
       sb.from("banners").select("*").eq("active",true).order("sort").order("id"),

@@ -118,7 +118,11 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const fmt=n=>(Number(n)||0).toLocaleString("ru-RU").replace(/\u00a0/g," ")+" so'm";
 const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("on"),2400)};
 if(!C.SUPABASE_URL||!C.SUPABASE_KEY||!window.supabase){$("#login").hidden=true;$("#setup").hidden=false;throw new Error("config.js to'ldirilmagan yoki Supabase kutubxonasi yuklanmadi")}
-const sb=supabase.createClient(C.SUPABASE_URL,C.SUPABASE_KEY);
+const cleanUrl=u=>{u=String(u||"").replace(/[\s"'“”‘’]/g,"");if(u&&!/^https?:\/\//i.test(u))u=u.includes(".")?"https://"+u:"https://"+u+".supabase.co";return u.replace(/\/(rest|auth|storage)\/v1.*$/i,"").replace(/\/+$/,"")};
+const cleanKey=k=>String(k||"").replace(/[\s"'“”‘’]/g,"");
+const URL_=cleanUrl(C.SUPABASE_URL),KEY_=cleanKey(C.SUPABASE_KEY);
+try{new URL(URL_)}catch(e){$("#lerr").textContent="config.js dagi SUPABASE_URL noto'g'ri. Men o'qigan qiymat: «"+C.SUPABASE_URL+"». U https://xxxx.supabase.co ko'rinishida bo'lishi kerak.";throw e}
+const sb=supabase.createClient(URL_,KEY_);
 const q=async p=>{const {data,error}=await p;if(error)throw error;return data};
 const safe=f=>async(...a)=>{try{await f(...a)}catch(er){alert("Xatolik: "+(er.message||er))}};
 let cur="home",PR=[],BN=[],ps="",of="all";
