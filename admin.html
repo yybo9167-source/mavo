@@ -123,6 +123,7 @@ const cleanKey=k=>String(k||"").replace(/[\s"'“”‘’]/g,"");
 const URL_=cleanUrl(C.SUPABASE_URL),KEY_=cleanKey(C.SUPABASE_KEY);
 try{new URL(URL_)}catch(e){$("#lerr").textContent="config.js dagi SUPABASE_URL noto'g'ri. Men o'qigan qiymat: «"+C.SUPABASE_URL+"». U https://xxxx.supabase.co ko'rinishida bo'lishi kerak.";throw e}
 const sb=supabase.createClient(URL_,KEY_);
+async function isAdmin(){const {data}=await sb.from("admins").select("user_id").maybeSingle();return !!data}
 const q=async p=>{const {data,error}=await p;if(error)throw error;return data};
 const safe=f=>async(...a)=>{try{await f(...a)}catch(er){alert("Xatolik: "+(er.message||er))}};
 let cur="home",PR=[],BN=[],ps="",of="all";
@@ -131,7 +132,7 @@ let cur="home",PR=[],BN=[],ps="",of="all";
 function show(a){$("#login").hidden=a;$("#app").hidden=!a;if(a)go(location.hash.slice(1)||"home")}
 $("#lf").onsubmit=async e=>{e.preventDefault();$("#lerr").textContent="";
   const {error}=await sb.auth.signInWithPassword({email:$("#em").value.trim(),password:$("#pw").value});
-  if(error)$("#lerr").textContent=/invalid login/i.test(error.message)?"Email yoki parol noto'g'ri":"Xatolik: "+error.message;else show(true)};
+  if(error)$("#lerr").textContent=/invalid login/i.test(error.message)?"Email yoki parol noto'g'ri":"Xatolik: "+error.message;else if(!(await isAdmin())){await sb.auth.signOut();$("#lerr").textContent="Bu hisob admin emas."}else show(true)};
 $("#out").onclick=async()=>{await sb.auth.signOut();show(false)};
 
 /* bo'limlar */
@@ -183,7 +184,7 @@ async function banners(){
    <div class="bt"><button class="ghost" data-act="edit" data-t="banners" data-id="${b.id}">Tahrirlash</button><button class="ghost red" data-act="del" data-t="banners" data-id="${b.id}">O'chirish</button></div></div>`).join(""):'<p class="muted">Baner yo\'q. Qo\'shsangiz, saytda karusel ko\'rinadi.</p>'}</div>`}
 
 /* buyurtmalar */
-const ST={new:"Yangi",confirmed:"Tasdiqlangan",delivered:"Yetkazilgan",canceled:"Bekor qilingan"};let OD=[];
+const ST={new:"Yangi",confirmed:"Tasdiqlangan",packing:"Yig'ilmoqda",shipping:"Yo'lda",delivered:"Yetkazilgan",canceled:"Bekor qilingan"};const PAYL={cash:"Naqd / karta",click:"Click",payme:"Payme"};let OD=[];
 async function orders(){OD=await q(sb.from("orders").select("*").order("id",{ascending:false}).limit(300));drawOrders()}
 function drawOrders(){
   const L=OD.filter(o=>of==="all"||o.status===of);
@@ -191,7 +192,9 @@ function drawOrders(){
   <div class="list">${L.length?L.map(o=>`<div class="order ${o.status}"><div class="oh"><b>№${o.id} · ${esc(o.name)}</b>
    <select data-act="st" data-id="${o.id}" data-cur="${o.status}" ${o.status==="canceled"?"disabled":""}>${Object.entries(ST).map(([k,n])=>`<option value="${k}" ${k===o.status?"selected":""}>${n}</option>`).join("")}</select></div>
    <div><a href="tel:${esc(o.phone.replace(/[^+\d]/g,""))}">${esc(o.phone)}</a> · <span class="muted">${new Date(o.created_at).toLocaleString("ru-RU")}</span></div>
-   <ul>${o.items.map(i=>`<li>• ${esc(i.name)} × ${i.qty} = ${fmt(i.price*i.qty)}</li>`).join("")}</ul><div class="tot">Jami: ${fmt(o.total)}</div></div>`).join(""):'<p class="muted">Buyurtma yo\'q.</p>'}</div>`}
+   <ul>${o.items.map(i=>`<li>• ${esc(i.name)} × ${i.qty} = ${fmt(i.price*i.qty)}</li>`).join("")}</ul><div class="tot">Jami: ${fmt(o.total)}</div>
+   ${o.address?`<div class="muted">📍 ${esc(o.address)}</div>`:""}${o.note?`<div class="muted">💬 ${esc(o.note)}</div>`:""}
+   <div class="oh"><span class="muted">💳 ${PAYL[o.payment_method]||"Naqd / karta"}</span><select data-act="pay" data-id="${o.id}"><option value="unpaid" ${o.payment_status!=="paid"?"selected":""}>To'lanmagan</option><option value="paid" ${o.payment_status==="paid"?"selected":""}>To'langan</option></select></div></div>`).join(""):'<p class="muted">Buyurtma yo\'q.</p>'}</div>`}
 
 /* sozlamalar */
 const SF=[["phone","Telefon"],["telegram","Telegram username (@ belgisiz). Buyurtmalar shu yerga ham yuboriladi"],["instagram","Instagram username (@ belgisiz)"],["address","Manzil"],["hours","Ish vaqti"],["mapUrl","Xarita havolasi (Google/Yandex)"],["legalName","Kompaniya rasmiy nomi"],["inn","STIR"],["about","«Biz haqimizda» matni (bo'sh qolsa, standart matn chiqadi)","textarea"]];
@@ -254,12 +257,13 @@ $("#view").addEventListener("change",safe(async e=>{const t=e.target,a=t.dataset
   if(a==="stock"){const n=Math.max(0,Math.floor(+t.value||0));await q(sb.from("products").update({stock:n}).eq("id",t.dataset.id));
     const p=PR.find(x=>x.id==t.dataset.id);if(p)p.stock=n;t.value=n;t.parentElement.className="stk "+(n<=0?"bad":n<=5?"warn":"");toast("Ombor yangilandi")}
   else if(a==="active"){await q(sb.from(t.dataset.t).update({active:t.checked}).eq("id",t.dataset.id));t.closest(".row").classList.toggle("off",!t.checked);toast(t.checked?"Saytda ko'rinadi":"Saytdan yashirildi")}
+  else if(a==="pay"){await q(sb.from("orders").update({payment_status:t.value}).eq("id",t.dataset.id));toast("To'lov holati yangilandi");go(cur)}
   else if(a==="st"){if(t.value==="canceled"&&!confirm("Bekor qilinsa, mahsulotlar omborga qaytariladi. Davom etilsinmi?")){t.value=t.dataset.cur;return}
     try{await q(sb.rpc("set_order_status",{p_id:+t.dataset.id,p_status:t.value}));toast("Holat o'zgardi")}catch(er){alert(er.message)}go(cur)}}));
 
 /* ishga tushirish (hamma narsa e'lon qilingandan keyin) */
 (async()=>{let ok=false;
-  try{const r=await Promise.race([sb.auth.getSession(),new Promise((_,j)=>setTimeout(()=>j(new Error("sessiya tekshiruvi kutish vaqti tugadi")),5000))]);ok=!!r.data.session}
+  try{const r=await Promise.race([sb.auth.getSession(),new Promise((_,j)=>setTimeout(()=>j(new Error("sessiya tekshiruvi kutish vaqti tugadi")),5000))]);ok=!!r.data.session;if(ok&&!(await isAdmin())){await sb.auth.signOut();ok=false;$("#lerr").textContent="Bu hisob admin emas."}}
   catch(e){console.error(e);$("#lerr").textContent="Sessiya tekshirilmadi: "+e.message+". Email va parolni qayta kiriting."}
   show(ok)})();
 </script>

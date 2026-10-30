@@ -174,6 +174,50 @@ body.open .drawer{transform:none}
 .it .t img{width:100%;height:100%;object-fit:cover;border-radius:16px}
 .done{padding:24px 0;text-align:center}.done h3{font:700 22px var(--display);color:var(--blue);margin-bottom:8px}
 .go2{display:inline-block;margin-top:16px;padding:12px 24px;border-radius:24px;background:var(--blue-soft);color:var(--blue);font:700 15px var(--display);text-decoration:none}
+/* hisob, profil, buyurtma holati */
+[hidden]{display:none!important}
+.acctbtn{width:46px;height:46px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center;position:relative;transition:transform .2s,background .2s;flex:none}
+.acctbtn:hover{background:var(--blue-mid);transform:scale(1.06)}
+.acctbtn svg{width:22px;height:22px}
+.acctbtn.in::after{content:"";position:absolute;right:1px;bottom:1px;width:13px;height:13px;border-radius:50%;background:#12805c;border:2px solid #fff}
+.foot{max-height:62vh;overflow:auto}
+.payopt{display:flex;gap:10px;align-items:center;padding:10px 14px;border:2px solid var(--line);border-radius:18px;margin-bottom:8px;font-weight:700;cursor:pointer}
+.payopt:has(input:checked){border-color:var(--blue);background:var(--blue-soft)}
+.payopt input{accent-color:var(--blue);width:18px;height:18px}
+.drawer.pd{z-index:32}
+body.open .drawer.pd{transform:translateX(102%)}
+body.popen .drawer.pd{transform:none}
+body.popen .shade{opacity:1;pointer-events:auto}
+.ptabs{display:flex;gap:8px;padding:0 24px 12px}
+.ptabs button{flex:1;height:40px;border-radius:20px;background:var(--blue-soft);color:var(--blue);font:700 14px var(--display)}
+.ptabs button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.oc{border:2px solid var(--line);border-radius:22px;padding:14px 16px;margin:0 0 12px;display:grid;gap:8px}
+.oc small{color:var(--muted)}.oc ul{list-style:none;padding:0;color:var(--muted);font-size:14px}
+.oh2{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px}
+.oh2 b{font:700 17px var(--display);color:var(--blue)}
+.pill{background:var(--blue);color:#fff;font:700 13px var(--display);padding:3px 12px;border-radius:14px}.pill.cx{background:#c0262d}
+.steps{list-style:none;padding:0;display:flex;margin:6px 0 2px}
+.steps li{flex:1;text-align:center;font-size:11px;line-height:1.2;color:var(--muted);position:relative;padding-top:20px}
+.steps li i{position:absolute;top:0;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#fff;border:3px solid var(--blue-mid);z-index:1}
+.steps li::before{content:"";position:absolute;top:6px;left:-50%;width:100%;height:3px;background:var(--blue-mid)}
+.steps li:first-child::before{display:none}
+.steps li.done i{background:var(--blue);border-color:var(--blue)}.steps li.done::before,.steps li.now::before{background:var(--blue)}
+.steps li.now i{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-mid)}
+.steps li.now,.steps li.done{color:var(--ink);font-weight:700}
+.pf{display:grid;gap:12px;padding-bottom:20px}
+.pf label{display:grid;gap:4px;font:700 14px var(--display);color:var(--muted)}
+.pf input,.af input{width:100%;height:46px;border-radius:23px;border:2px solid var(--line);padding:0 18px;outline:0;font:inherit;color:var(--ink)}
+.pf input:focus,.af input:focus{border-color:var(--blue)}
+.ghost2{width:100%;height:44px;border-radius:22px;background:var(--blue-soft);color:var(--blue);font:700 15px var(--display)}
+.muted2{color:var(--muted);padding:20px 0;text-align:center}
+.af{display:grid;gap:12px;width:min(400px,80vw)}
+.atabs{display:flex;gap:8px}
+.atabs button{flex:1;height:42px;border-radius:21px;background:var(--blue-soft);color:var(--blue);font:700 15px var(--display)}
+.atabs button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.hint2{font-size:14px;color:var(--muted);margin:0}
+.aerr{color:#c0262d;font-weight:700;font-size:14px;min-height:1px;margin:0}
+.go2{border:0;cursor:pointer}
+@media (max-width:560px){.acctbtn,.cartbtn{width:40px;height:40px}.burger{width:40px;height:40px}.burger span,.burger span::before,.burger span::after{left:10px}.search{display:none}.bar .logo{margin-right:auto}}
 /* rasmiy sayt bo'limlari */
 .nav{display:flex;gap:4px;margin-left:12px}
 .nav a{padding:8px 13px;border-radius:18px;font:600 15px var(--display);color:var(--ink);text-decoration:none;transition:background .2s,color .2s}
@@ -264,6 +308,7 @@ dialog .send{margin-top:8px}
     </nav>
     <label class="search"><input id="q" type="search" placeholder="Mahsulot qidirish…" aria-label="Mahsulot qidirish"></label>
     <button class="burger" id="burger" aria-label="Menyu" aria-expanded="false"><span></span></button>
+    <button class="acctbtn" id="openAcct" aria-label="Profil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></button>
     <button class="cartbtn" id="openCart" aria-label="Savatni ochish">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2 11h10l2-8H7"/><circle cx="9" cy="20" r="1" fill="currentColor"/><circle cx="17" cy="20" r="1" fill="currentColor"/></svg>
       <span class="badge" id="count">0</span>
@@ -395,10 +440,29 @@ dialog .send{margin-top:8px}
     <div class="tot"><span>Jami</span><span id="total">0 so'm</span></div>
     <input id="name" placeholder="Ismingiz" autocomplete="name">
     <input id="phone" placeholder="Telefon raqamingiz" inputmode="tel" autocomplete="tel">
+    <input id="address" placeholder="Yetkazib berish manzili" autocomplete="street-address">
+    <input id="note" placeholder="Izoh (ixtiyoriy)">
+    <div id="pay"></div>
     <button class="send" id="send" disabled>Buyurtma berish</button>
-    <p class="hint">Buyurtma Telegram orqali do'konga yuboriladi</p>
+    <p class="hint" id="hint"></p>
   </div>
 </aside>
+<aside class="drawer pd" id="pdrawer" aria-label="Profil">
+  <div class="dh"><h2>Profil</h2><button class="x" id="closePd" aria-label="Yopish">✕</button></div>
+  <div class="ptabs"><button data-pt="orders" aria-pressed="true">Buyurtmalarim</button><button data-pt="info" aria-pressed="false">Ma'lumotlarim</button></div>
+  <div class="items" id="pbody"></div>
+</aside>
+<dialog id="auth"><form id="aform" class="af">
+  <div class="atabs"><button type="button" data-m="in" aria-pressed="true">Kirish</button><button type="button" data-m="up" aria-pressed="false">Ro'yxatdan o'tish</button></div>
+  <p class="hint2">Savatingiz saqlanadi. Buyurtmalaringizni profilingizda kuzatib borasiz.</p>
+  <input id="aname" class="up" placeholder="Ismingiz" autocomplete="name" hidden>
+  <input id="aphone" class="up" placeholder="Telefon raqamingiz" inputmode="tel" autocomplete="tel" hidden>
+  <input id="aemail" type="email" placeholder="Email" autocomplete="email" required>
+  <input id="apass" type="password" placeholder="Parol (kamida 6 belgi)" minlength="6" required autocomplete="current-password">
+  <p class="aerr" id="aerr"></p>
+  <button class="send" id="asub">Kirish</button>
+  <button type="button" class="ghost2" id="aclose">Yopish</button>
+</form></dialog>
 
 <script type="module">
 /* ====== SAYT MA'LUMOTLARI: hammasini shu yerdan o'zgartiring ====== */
@@ -410,7 +474,8 @@ const SITE = {
   hours:"Har kuni 09:00–21:00",
   mapUrl:"",                   // Google/Yandex xarita havolasi (bo'sh qolsa ko'rinmaydi)
   legalName:"",                // masalan "MAVO MChJ" (bo'sh qolsa ko'rinmaydi)
-  inn:""                       // STIR (bo'sh qolsa ko'rinmaydi)
+  inn:"",                      // STIR (bo'sh qolsa ko'rinmaydi)
+  payme_id:"",click_service:"",click_merchant:""   // to'lov tizimlari: keyingi bosqichda to'ldiriladi
 };
 const TELEGRAM = SITE.telegram;
 /* ====== SOZLAMALAR ====== */
@@ -519,29 +584,125 @@ $("#items").addEventListener("click",e=>{
   if(!cart[id]) delete cart[id]; save(); update();
 });
 function check(){
-  $("#send").disabled=!(Object.keys(cart).length&&$("#name").value.trim()&&$("#phone").value.trim().length>=7);
+  const full=$("#name").value.trim().length>=2&&$("#phone").value.trim().length>=7&&($("#address").value.trim().length>=5||!SB);
+  $("#send").disabled=!(Object.keys(cart).length&&((SB&&!USER)||full));
 }
-["#name","#phone"].forEach(s=>$(s).addEventListener("input",check));
+["#name","#phone","#address"].forEach(s=>$(s).addEventListener("input",check));
 $("#send").addEventListener("click",async()=>{
   const ids=Object.keys(cart);
   const lines=ids.map(id=>{const p=PRODUCTS.find(x=>x.id==id);return `• ${p.name} × ${cart[id]} = ${fmt(p.price*cart[id])}`});
   const sum=ids.reduce((s,id)=>s+cart[id]*PRODUCTS.find(p=>p.id==id).price,0);
-  const nm=$("#name").value.trim(),ph=$("#phone").value.trim();
-  const tg=no=>`https://t.me/${SITE.telegram}?text=${encodeURIComponent(`Yangi buyurtma${no} (mavo)\n${lines.join("\n")}\nJami: ${fmt(sum)}\nIsm: ${nm}\nTelefon: ${ph}`)}`;
+  const nm=$("#name").value.trim(),ph=$("#phone").value.trim(),ad=$("#address").value.trim(),nt=$("#note").value.trim();
+  const tg=no=>`https://t.me/${SITE.telegram}?text=${encodeURIComponent(`Yangi buyurtma${no} (mavo)\n${lines.join("\n")}\nJami: ${fmt(sum)}\nIsm: ${nm}\nTelefon: ${ph}\nManzil: ${ad}`)}`;
   if(!SB){window.open(tg(""),"_blank");cart={};save();update();toggle(false);return}
+  if(!USER){openAuth("up",()=>{fillCheckout();check()});return}
+  const pay=document.querySelector("input[name=pay]:checked")?.value||"cash";
   const btn=$("#send");btn.disabled=true;btn.textContent="Yuborilmoqda…";
-  const {data,error}=await SB.rpc("place_order",{p_name:nm,p_phone:ph,p_items:ids.map(id=>({id:Number(id),qty:cart[id]}))});
+  const {data,error}=await SB.rpc("place_order",{p_name:nm,p_phone:ph,p_address:ad,p_note:nt,p_payment:pay,p_items:ids.map(id=>({id:Number(id),qty:cart[id]}))});
   btn.textContent="Buyurtma berish";
   if(error){alert(error.message);check();return}
-  cart={};save();update();
-  $("#items").innerHTML=`<div class="done"><h3>Buyurtmangiz qabul qilindi</h3><p>Buyurtma raqami: <b>№${data}</b>. Operator tez orada siz bilan bog'lanadi.</p><a class="go2" href="${tg(" №"+data)}" target="_blank" rel="noopener">Telegramda ham yuborish</a></div>`;
+  SB.from("profiles").upsert({id:USER.id,name:nm,phone:ph,address:ad}).then(()=>{PROFILE={...PROFILE,name:nm,phone:ph,address:ad}});
+  cart={};save();update();$("#note").value="";
+  const url=payUrl(pay,data,sum);
+  $("#items").innerHTML=`<div class="done"><h3>Buyurtmangiz qabul qilindi</h3><p>Buyurtma raqami: <b>№${data}</b>. Holatini profilingizdagi «Buyurtmalarim» bo'limida kuzatishingiz mumkin.</p>${url?`<a class="go2" href="${url}">${pay==="click"?"Click":"Payme"} orqali to'lash</a> `:""}<button class="go2" id="goOrd">Buyurtmalarim</button></div>`;
+  $("#goOrd").onclick=()=>popen("orders");
 });
 
-const toggle=o=>{document.body.classList.toggle("open",o)};
+const toggle=o=>{document.body.classList.toggle("open",o);document.body.classList.remove("popen")};
 $("#openCart").onclick=()=>toggle(true);
 $("#closeCart").onclick=$("#shade").onclick=()=>toggle(false);
 addEventListener("keydown",e=>{if(e.key==="Escape")toggle(false)});
 
+
+/* ===== hisob: kirish, profil, buyurtmalarim ===== */
+let USER=null,PROFILE=null,amode="in",afterAuth=null,ptab="orders";
+const authDlg=$("#auth");
+const ORD_ST={new:"Qabul qilindi",confirmed:"Tasdiqlandi",packing:"Yig'ilmoqda",shipping:"Yo'lda",delivered:"Yetkazildi",canceled:"Bekor qilindi"};
+const FLOW=["new","confirmed","packing","shipping","delivered"];
+const PAYL={cash:"Naqd / karta",click:"Click",payme:"Payme"};
+const hintUpdate=()=>{$("#hint").textContent=!SB?"Buyurtma Telegram orqali do'konga yuboriladi":USER?"Hisob: "+USER.email:"Buyurtma berishda hisobingizga kirasiz yoki ro'yxatdan o'tasiz. Savatingiz saqlanadi."};
+const setUser=u=>{USER=u;$("#openAcct").classList.toggle("in",!!u);hintUpdate();check()};
+function fillCheckout(){if(!PROFILE)return;[["#name",PROFILE.name],["#phone",PROFILE.phone],["#address",PROFILE.address]].forEach(([id,v])=>{const e=$(id);if(v&&!e.value)e.value=v});check()}
+async function loadProfile(){if(!USER)return;const {data}=await SB.from("profiles").select("*").eq("id",USER.id).maybeSingle();PROFILE=data||{};fillCheckout()}
+if(SB){
+  SB.auth.getSession().then(({data})=>{setUser(data.session?.user||null);loadProfile()});
+  SB.auth.onAuthStateChange((_e,s)=>{setUser(s?.user||null);setTimeout(()=>{USER?loadProfile():(PROFILE=null)},0)});
+}else{$("#openAcct").hidden=true;hintUpdate()}
+
+/* to'lov usullari (Click/Payme faqat sozlamalarda yoqilganda ko'rinadi) */
+const PAYM=[["cash","Naqd yoki karta (qabul qilganda)"],...(SITE.click_service&&SITE.click_merchant?[["click","Click orqali to'lash"]]:[]),...(SITE.payme_id?[["payme","Payme orqali to'lash"]]:[])];
+$("#pay").innerHTML=PAYM.length>1?PAYM.map(([v,l],i)=>`<label class="payopt"><input type="radio" name="pay" value="${v}" ${i?"":"checked"}> ${l}</label>`).join(""):`<p class="hint" style="margin:0 0 10px;text-align:left">To'lov: naqd yoki karta orqali, mahsulotni qabul qilganda.</p>`;
+function payUrl(m,id,sum){
+  const back=location.origin+location.pathname;
+  if(m==="payme"&&SITE.payme_id)return "https://checkout.paycom.uz/"+btoa(`m=${SITE.payme_id};ac.order_id=${id};a=${sum*100};l=uz;c=${back}`);
+  if(m==="click"&&SITE.click_service&&SITE.click_merchant)return `https://my.click.uz/services/pay?service_id=${SITE.click_service}&merchant_id=${SITE.click_merchant}&amount=${sum}&transaction_param=${id}&return_url=${encodeURIComponent(back)}`;
+  return "";
+}
+
+/* kirish / ro'yxatdan o'tish oynasi */
+function renderAuth(){
+  document.querySelectorAll("#auth [data-m]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.m===amode));
+  document.querySelectorAll("#auth .up").forEach(e=>e.hidden=amode!=="up");
+  $("#aerr").textContent="";$("#asub").textContent=amode==="up"?"Ro'yxatdan o'tish":"Kirish";
+  $("#apass").autocomplete=amode==="up"?"new-password":"current-password";
+}
+function openAuth(mode,cb){amode=mode||"in";afterAuth=cb||null;renderAuth();authDlg.showModal()}
+authDlg.addEventListener("click",e=>{const b=e.target.closest("[data-m]");if(b){amode=b.dataset.m;renderAuth()}if(e.target===authDlg)authDlg.close()});
+$("#aclose").onclick=()=>authDlg.close();
+const authMsg=m=>/invalid login/i.test(m)?"Email yoki parol noto'g'ri":/already registered/i.test(m)?"Bu email bilan ro'yxatdan o'tilgan. «Kirish» bo'limidan kiring":/at least 6|weak/i.test(m)?"Parol kamida 6 ta belgi bo'lsin":/signups? (not allowed|disabled)/i.test(m)?"Ro'yxatdan o'tish hozircha yopiq":m;
+$("#aform").onsubmit=async e=>{
+  e.preventDefault();const btn=$("#asub");btn.disabled=true;$("#aerr").textContent="";
+  const email=$("#aemail").value.trim(),password=$("#apass").value;
+  try{
+    let r;
+    if(amode==="up"){
+      const name=$("#aname").value.trim(),phone=$("#aphone").value.trim();
+      if(name.length<2||phone.replace(/\D/g,"").length<9)throw new Error("Ism va telefon raqamini to'g'ri kiriting");
+      r=await SB.auth.signUp({email,password,options:{data:{name,phone}}});
+      if(!r.error&&!r.data.session)throw new Error("Email tasdiqlash yoqilgan. Supabase'da «Confirm email» ni o'chirish kerak.");
+    }else r=await SB.auth.signInWithPassword({email,password});
+    if(r.error)throw r.error;
+    authDlg.close();const cb=afterAuth;afterAuth=null;if(cb)setTimeout(cb,400);
+  }catch(er){$("#aerr").textContent=authMsg(er.message)}finally{btn.disabled=false}
+};
+
+/* profil oynasi */
+function popen(t){ptab=t||ptab;document.body.classList.remove("open");document.body.classList.add("popen");renderP()}
+$("#openAcct").onclick=()=>USER?popen():openAuth("in",()=>popen());
+$("#closePd").onclick=()=>toggle(false);
+document.querySelector(".ptabs").addEventListener("click",e=>{const b=e.target.closest("[data-pt]");if(b){ptab=b.dataset.pt;renderP()}});
+function renderP(){
+  document.querySelectorAll(".ptabs [data-pt]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pt===ptab));
+  ptab==="orders"?loadOrders():renderInfo();
+}
+const orderCard=o=>{
+  const k=FLOW.indexOf(o.status),cx=o.status==="canceled";
+  return `<div class="oc"><div class="oh2"><b>№${o.id}</b><span class="pill ${cx?"cx":""}">${ORD_ST[o.status]||esc(o.status)}</span></div>
+  <small>${new Date(o.created_at).toLocaleString("ru-RU")}</small>
+  ${cx?"":`<ol class="steps">${FLOW.map((s,i)=>`<li class="${i<k?"done":i===k?"now":""}"><i></i>${ORD_ST[s]}</li>`).join("")}</ol>`}
+  <ul>${o.items.map(i=>`<li>${esc(i.name)} × ${i.qty}</li>`).join("")}</ul>
+  <div class="oh2"><span>${PAYL[o.payment_method]||""} · ${o.payment_status==="paid"?"to'langan":"to'lanmagan"}</span><b>${fmt(o.total)}</b></div></div>`;
+};
+async function loadOrders(quiet){
+  const box=$("#pbody"),top=box.scrollTop;
+  if(!quiet)box.innerHTML='<p class="muted2">Yuklanmoqda…</p>';
+  const {data,error}=await SB.from("orders").select("*").order("id",{ascending:false});
+  if(ptab!=="orders")return;
+  if(error){box.innerHTML=`<p class="muted2">Xatolik: ${esc(error.message)}</p>`;return}
+  box.innerHTML=(data.length?data.map(orderCard).join(""):'<p class="muted2">Hozircha buyurtma yo\'q.</p>')+'<button class="ghost2" id="rf">Yangilash</button>';
+  box.scrollTop=top;$("#rf").onclick=()=>loadOrders();
+}
+setInterval(()=>{if(SB&&USER&&document.body.classList.contains("popen")&&ptab==="orders"&&!document.hidden)loadOrders(true)},30000);
+function renderInfo(){
+  const p=PROFILE||{};
+  $("#pbody").innerHTML=`<form id="pf" class="pf"><label>Ism<input id="pn" value="${esc(p.name||"")}"></label><label>Telefon<input id="pp" value="${esc(p.phone||"")}" inputmode="tel"></label><label>Manzil<input id="pa" value="${esc(p.address||"")}"></label><p class="hint" id="pm">${esc(USER.email||"")}</p><button class="send">Saqlash</button><button type="button" class="ghost2" id="lo">Chiqish</button></form>`;
+  $("#pf").onsubmit=async e=>{e.preventDefault();
+    const rec={name:$("#pn").value.trim(),phone:$("#pp").value.trim(),address:$("#pa").value.trim()};
+    const {error}=await SB.from("profiles").upsert({id:USER.id,...rec});
+    $("#pm").textContent=error?error.message:"Saqlandi ✓";if(!error)PROFILE={...PROFILE,...rec};
+  };
+  $("#lo").onclick=async()=>{await SB.auth.signOut();toggle(false)};
+}
 
 /* baner karuseli */
 (()=>{
